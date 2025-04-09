@@ -1,85 +1,47 @@
+import QuestionComp from "./QuestionComp";
+
 const HomeContent = () => {
   return (
-    <div className="w-[90%] max-w-[1400px] mt-[60px] mx-auto bg-white shadow-lg rounded-[15px] overflow-hidden border border-black/5">
-      <div className="relative w-full h-screen overflow-hidden border-b border-gray-300">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-[1]"
-        >
-          <source src="/videos/yapayzeka-samsun.mp4" type="video/mp4" />
-          Tarayıcınız video etiketini desteklemiyor.
-        </video>
+    <div className="w-[90%] max-w-[1400px] mt-[60px] mx-auto  shadow-lg rounded-[15px] overflow-hidden border  border-black/5">
+      <div className="bg-bg3 bg-fixed bg-no-repeat bg-cover relative w-full h-screen overflow-hidden border-b border-gray-300  ">
         <div className="absolute bottom-[150px] left-[50px] text-white text-[4.5rem] font-bold z-[2] [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
           SAMSUN ÜNİVERSİTESİ
         </div>
       </div>
 
       <section className="ai-section relative bg-white z-30 mt-0 py-10 min-h-screen flex flex-col items-center justify-center border-b border-gray-300 transition-all duration-300 ease-in-out hover:bg-[#fafbfc]">
-        <div className="ai-tools-section relative bg-white z-30 mt-0 py-10 min-h-screen flex flex-col items-center justify-center border-b border-gray-300 transition-all duration-300 ease-in-out hover:bg-[#fafbfc]">
-          
-          <video autoPlay muted loop playsInline className="absolute">
-            <source src="/img/background/video6.mp4" type="video/mp4" />
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-          <h2>YAPAY ZEKA NEDİR?</h2>
-        </div>
+        {/* <div className="relative w-full h-30 overflow-hidden border-b border-gray-300  ">
+        </div> */}
+          <div className="top-0 absolute text-center  bg-opacity-50 bg-black w-full  text-white text-[4.5rem] font-bold z-[2] [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
+            YAPAY ZEKA NEDİR?
+          </div>
 
         <div className="flex justify-between max-w-[1200px] mx-auto my-10 px-5 gap-7">
-          <div className="flex-1 flex flex-col items-center transition-transform duration-300 ease-in-out">
-            <video autoPlay muted loop playsInline>
-              <source src="/videos/video1.mp4" type="video/mp4" />
-              Tarayıcınız video etiketini desteklemiyor.
-            </video>
-            <h3 className="text-xl text-[#333] text-center mb-2 pb-2 border-b-2 border-[#007bff] w-full transition-all duration-300 ease-in-out">
-              Yapay Zeka Ne Anlama Geliyor?
-            </h3>
-            <br />
-            <p>
-              Hepimiz muhtemelen 'yapay zeka' veya 'AI' kelimelerini
-              duymuşuzdur. Peki bu aslında ne anlama geliyor?{" "}
-            </p>
-          </div>
-          <div className="flex-1 flex flex-col items-center transition-transform duration-300 ease-in-out">
-            <video autoPlay muted loop playsInline>
-              <source src="/videos/video2.mp4" type="video/mp4" />
-              Tarayıcınız video etiketini desteklemiyor.
-            </video>
-            <h3 className="text-xl text-[#333] text-center mb-2 pb-2 border-b-2 border-[#007bff] w-full transition-all duration-300 ease-in-out">
-              Yapay Zekanın Türleri
-            </h3>{" "}
-            <br />
-            <p>
-              Makine Öğrenmesi, Üretken Yapay Zeka... Yapay Zeka ile birlikte
-              birçok terim kullanılıyor. Fark nedir?
-            </p>
-          </div>
-          <div className="flex-1 flex flex-col items-center transition-transform duration-300 ease-in-out">
-            <video autoPlay muted loop playsInline>
-              <source src="/videos/video3.mp4" type="video/mp4" />
-              Tarayıcınız video etiketini desteklemiyor.
-            </video>
-            <h3 className="text-xl text-[#333] text-center mb-2 pb-2 border-b-2 border-[#007bff] w-full transition-all duration-300 ease-in-out">
-              Yapay Zeka Nasıl Öğrenir?
-            </h3>{" "}
-            <br />
-            <p>
-              Bir yapay zekanın bir şey öğrendiğini duyduğumuzda bu ne anlama
-              gelir?
-            </p>
-          </div>
+          <QuestionComp
+            title="Yapay Zeka Ne Anlama Geliyor?"
+            text="Hepimiz muhtemelen 'yapay zeka' veya 'AI' kelimelerini duymuşuzdur. Peki bu aslında ne anlama geliyor?"
+            videoUrl="/videos/video1.mp4"
+          />
+          <QuestionComp
+            title="Yapay Zekanın Türleri"
+            text="Makine Öğrenmesi, Üretken Yapay Zeka... Yapay Zeka ile birlikte birçok terim kullanılıyor. Fark nedir?"
+            videoUrl="/videos/video2.mp4"
+          />
+          <QuestionComp
+            title="Yapay Zeka Nasıl Öğrenir?"
+            text="Bir yapay zekanın bir şey öğrendiğini duyduğumuzda bu ne anlama gelir?"
+            videoUrl="/videos/video3.mp4"
+          />
         </div>
       </section>
 
       <section className="relative bg-white z-30 mt-0 py-10 min-h-screen flex flex-col items-center justify-center border-b border-[#e0e0e0] transition-all duration-300 ease-in-out hover:bg-[#fafbfc]">
-        <div className="relative w-full h-[300px] overflow-hidden mb-12 rounded-b-[20px] shadow-lg">
-          <img
+        <div className="bg-bg2 bg-fixed bg-no-repeat bg-cover relative w-full h-[300px] overflow-hidden mb-12 rounded-b-[20px] shadow-lg">
+          {/* <img
             className="w-full h-full object-cover absolute top-0 left-0 opacity-80"
             src="/img/background/yz4.png"
             alt="AI Background"
-          />
+          /> */}
           <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl text-white m-0 text-center font-serif text-shadow-lg z-10 w-full bg-black bg-opacity-50 py-5 tracking-wider">
             YAPAY ZEKA GÜVENLİ Mİ?
           </h2>
@@ -111,12 +73,12 @@ const HomeContent = () => {
       </section>
 
       <section className="relative bg-white z-30 mt-0 py-10 min-h-screen flex flex-col items-center justify-center border-b border-[#e0e0e0] transition-all duration-300 ease-in-out hover:bg-[#fafbfc]">
-        <div className="relative w-full h-[300px] overflow-hidden mb-12 rounded-b-[20px] shadow-lg">
-          <img
+        <div className="bg-bg4 bg-fixed bg-no-repeat bg-cover relative w-full h-[300px] overflow-hidden mb-12 rounded-b-[20px] shadow-lg">
+          {/* <img
             className="w-full h-full object-cover absolute top-0 left-0 opacity-80"
             src="/img/background/yz4.png"
             alt="AI Tools Background"
-          />
+          /> */}
           <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl text-white m-0 text-center font-serif text-shadow-lg z-10 w-full bg-black bg-opacity-50 py-5 tracking-wider">
             YAPAY ZEKA ARAÇLARI
           </h2>
