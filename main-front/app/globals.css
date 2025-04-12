@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Nocturne";
+  src: url("/fonts/NocturneSerif-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+ 
