@@ -1,18 +1,12 @@
+import Image from "next/image";
 import React from "react";
 import { FaAnglesRight } from "react-icons/fa6";
-
-// interface ProjectCompProps {
-//   title: string;
-//   description: string;
-//   image: string;
-//   date: Date;
-// }
 
 const NewsComp = () => {
   return (
     <div className="w-[16.3vw] h-[40vh] bg-topNavBg rounded-lg overflow-hidden flex-shrink-0 mx-[1vw]">
       <div className="w-full h-[16vh]">
-        <img
+        <Image
           src="/images/news1.png"
           alt="Proje görseli"
           className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
@@ -21,14 +15,14 @@ const NewsComp = () => {
 
       <div className="ml-[5%] w-[90%] h-[9vh] text-center py-[1vh] overflow-hidden border-b-2">
         <h1 className="font-bold font-opensans opacity-70 hover:opacity-100 text-white">
-          Yapay zeka ile beynin "dijital ikizi" yapıldı
+          Yapay zeka ile beynin &quot;Dijital ikizi&quot; yapıldı
         </h1>
       </div>
 
       <div className="ml-[5%] w-[90%] h-[15vh]">
         <div className="h-[6vh] mt-[0.5vh] overflow-hidden">
           <p className="line-clamp-2 font-opensans text-sm text-center opacity-70 hover:opacity-100 text-white">
-            Bilim insanları, yapay zekayla fare beyninin “dijital ikizini”
+            Bilim insanları, yapay zekayla fare beyninin &quot;Dijital ikizi&quot;
             oluşturdu. Model, nöron tepkilerini tahmin ederek deneyleri
             hızlandırıyor. Hedef, insan beyninin sanal kopyasını oluşturmak.
           </p>

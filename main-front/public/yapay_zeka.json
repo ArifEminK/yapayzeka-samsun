@@ -1,0 +1,58 @@
+{
+  "Yapay Zeka Info": {
+    "Sorular": {
+      "1": "Yapay Zeka Ne Anlama Geliyor?",
+      "2": "Yapay Zekanın Türleri Nelerdir?",
+      "3": "Yapay Zeka Nasıl Öğrenir?",
+      "4": "Yapay Zeka Güvenli Mi?",
+      "5": "Yapay Zeka Araçları"
+    },
+    "Cevaplar": {
+      "1": "AI, yani yapay zeka… Hepimiz bu terimi bir şekilde duymuşuzdur. Peki, yapay zeka gerçekten neyi ifade ediyor? Sadece geçici bir teknoloji trendi mi, yoksa geleceğimizi şekillendiren kalıcı bir dönüşüm mü?",
+      "2": "Yapay zekayla birlikte sıkça duyduğumuz makine öğrenmesi, derin öğrenme ve üretken yapay zeka gibi kavramlar aslında ne anlama geliyor? Aralarındaki farklar neler?",
+      "3": "Bir yapay zekanın 'öğrenmesi' tam olarak ne anlama gelir? Bilgisayarlar gerçekten öğrenebilir mi?",
+      "4": "Yapay zekanın güvenliği, sistemlerin öngörülebilir, denetlenebilir ve insan kontrolü altında çalışıp çalışmadığına bağlıdır. Kısa vadede güvenlik; algoritmaların hatasız, adil ve veri gizliliğine uygun çalışmasını içerir. Örneğin, önyargılı veriyle eğitilmiş bir model, hatalı veya ayrımcı sonuçlar üretebilir. Uzun vadede ise yapay zekanın otonom karar alma yeteneği, kontrol ve denetim mekanizmalarının önemini artırır. Bu nedenle, AI safety (yapay zeka güvenliği) araştırmaları; sistemlerin güvenilirliğini, açıklanabilirliğini ve insan merkezli tasarımını önceliklendirir. Yapay zeka, uygun şekilde geliştirildiğinde güvenli olabilir; ancak bu süreçte, sürekli denetim, şeffaflık ve etik standartların uygulanması önemlidir.",
+      "5": "Yapay zeka (AI) araçları, günümüzde araştırmadan endüstriyel uygulamalara kadar geniş bir alanda dönüştürücü bir rol oynamaktadır. Bu araçlar, veri analizinden otomasyona, doğal dil işlemeden görüntü tanımaya kadar çeşitli görevleri gerçekleştirebilir. Başlıca yapay zeka araçları şunlardır:"
+    },
+    "Araçlar": [
+      "Makine Öğrenimi (ML) ve Derin Öğrenme Araçları",
+      "Doğal Dil İşleme (NLP) Araçları",
+      "Bilgisayarlı Görü ve Görüntü İşleme",
+      "Veri Analizi ve Büyük Veri Araçları",
+      "Otonom Sistemler ve Robotik",
+      "Ses ve Konuşma İşleme"
+    ]
+  },
+  "Projeler": {
+    "0": "Batarya Sağlık Durumu Takibi",
+    "1": "Fındık Üreticileri için Yapay Zeka Tabanlı Mobil Sistem",
+    "2": "Türkçe İşaret Dili Tanıma Uygulaması",
+    "3": "Akciğer Kanseri Teşhisi için Açıklanabilir Yapay Zeka Destekli Sistem",
+    "4": "Diyabet Hastalığının Tahmini ve Yönetimi",
+    "5": "Deri Kanseri Türlerinin Tespiti",
+    "6": "Fidye Yazılımlarının Tespiti",
+    "7": "Retina Hastalıkları Tespiti",
+    "8": "Hasarlı Görüntülerin Restorasyonu",
+    "9": "Batarya Sağlık Durumu Takibi"
+  },
+  "Akademisyenler": {
+    "names": {
+      "1": "Doç. Dr. Zafer Cömert",
+      "2": "Doç. Dr. Muammer Türkoğlu",
+      "3": "Doç. Dr. Abdulkadir Karacı",
+      "4": "Dr. Öğr. Üyesi Özgür TONKAL",
+      "5": "Dr. Öğr. Üyesi Nurettin ŞENYER",
+      "6": "Arş. Gör. Ömer DURMUŞ",
+      "7": "Arş. Gör. Ferhat ARAT"
+    },
+    "img_path": [
+      "/images/akademisyenler/zafer.comert.png",
+      "/images/akademisyenler/muammer.turkoglu.png",
+      "/images/akademisyenler/abdulkadir.karaci.png",
+      "/images/akademisyenler/ozgur.tonkal.png",
+      "/images/akademisyenler/default.png",
+      "/images/akademisyenler/omer.durmus.png",
+      "/images/akademisyenler/ferhat.arat.png"
+    ]
+  }
+}

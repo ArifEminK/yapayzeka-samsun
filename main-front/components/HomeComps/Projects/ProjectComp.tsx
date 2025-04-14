@@ -1,18 +1,16 @@
+import Image from "next/image";
 import React from "react";
 import { FaAnglesRight } from "react-icons/fa6";
 
-// interface ProjectCompProps {
-//   title: string;
-//   description: string;
-//   image: string;
-//   date: Date;
-// }
+interface ProjectCompProps {
+  title: string;
+}
 
-const ProjectComp = () => {
+const ProjectComp: React.FC<ProjectCompProps> = ({title}) => {
   return (
     <div className="w-[16.3vw] h-[40vh] bg-topNavBg rounded-lg overflow-hidden flex-shrink-0 mx-[1vw]">
       <div className="w-full h-[16vh]">
-        <img
+        <Image
           src="/images/project1.png"
           alt="Proje görseli"
           className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
@@ -20,8 +18,8 @@ const ProjectComp = () => {
       </div>
 
       <div className="ml-[5%] w-[90%] h-[9vh] text-center py-[1vh] overflow-hidden border-b-2">
-        <h1 className="font-bold font-opensans opacity-70 hover:opacity-100 text-white">
-          Doç. Dr. Zafer Cömert’ten TÜBİTAK Proje Başarısı
+        <h1 className="line-clamp-2 font-bold font-opensans opacity-70 hover:opacity-100 text-white">
+          {title}
         </h1>
       </div>
 
