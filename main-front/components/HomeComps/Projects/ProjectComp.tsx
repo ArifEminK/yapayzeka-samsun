@@ -6,18 +6,20 @@ interface ProjectCompProps {
   title: string;
 }
 
-const ProjectComp: React.FC<ProjectCompProps> = ({title}) => {
+const ProjectComp: React.FC<ProjectCompProps> = ({ title }) => {
   return (
-    <div className="w-[16.3vw] h-[40vh] bg-topNavBg rounded-lg overflow-hidden flex-shrink-0 mx-[1vw]">
+    <div className="md:w-[16.3vw] w-[80vw] md:h-[40vh] h-[40vh] bg-topNavBg rounded-lg overflow-hidden flex-shrink-0 mx-[1vw]">
       <div className="w-full h-[16vh]">
         <Image
           src="/images/project1.png"
           alt="Proje görseli"
+          width={400}
+          height={300}
           className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
         />
       </div>
 
-      <div className="ml-[5%] w-[90%] h-[9vh] text-center py-[1vh] overflow-hidden border-b-2">
+      <div className="ml-[5%] w-[90%] h-[9vh] text-center overflow-hidden border-b-2 flex items-center justify-center">
         <h1 className="line-clamp-2 font-bold font-opensans opacity-70 hover:opacity-100 text-white">
           {title}
         </h1>

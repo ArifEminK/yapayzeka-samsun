@@ -14,13 +14,13 @@ const MainSection = () => {
       >
         <source src="/videos/bg_video.mp4" type="video/mp4" />
       </video>
-      <div className="absolute bottom-[10vh] left-[2vw] text-white text-[4.5rem] font-bold z-[2] [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
-        <h1 className="text-white mb-4 text-4xl md:text-5xl lg-text-7xl font-semibold font-poppins">
-          {/* Samsun <br/>Üniversitesi */}
-          <span className="bg-gradient-to-r text-7xl font-opensans text-white">
+
+      <div className="absolute bottom-[10vh] left-[2vw] z-[2] text-white text-[8vw] sm:text-[4.5rem] font-bold [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
+        <h1 className="mb-4 text-[8vw] sm:text-4xl md:text-5xl lg:text-7xl font-semibold font-poppins">
+          <span className="bg-gradient-to-r text-[10vw] sm:text-7xl font-opensans text-white">
             Yapay Zeka
           </span>
-          <div className="h-2 mt-[2vh] "></div>
+          <div className="h-2 mt-[2vh]"></div>
           <TypeAnimation
             sequence={[
               "Nedir?",
@@ -33,10 +33,9 @@ const MainSection = () => {
             wrapper="span"
             speed={10}
             repeat={Infinity}
-            className="text-7xl font-opensans"
-          /> 
+            className="text-[8vw] sm:text-7xl font-opensans"
+          />
         </h1>
-
       </div>
     </div>
   );
