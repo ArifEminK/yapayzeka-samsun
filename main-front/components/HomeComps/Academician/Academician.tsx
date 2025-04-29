@@ -8,7 +8,7 @@ interface AcademicianProps {
 
 const Academician: React.FC<AcademicianProps> = ({ name, img_path }) => {
   return (
-    <div className="relative h-[50vh] w-full bg-topNavBg text-black rounded-lg overflow-hidden group">
+    <section id="academician" className="relative h-[50vh] w-full bg-topNavBg text-black rounded-lg overflow-hidden group">
       <Image
         src={img_path}
         fill
@@ -20,7 +20,7 @@ const Academician: React.FC<AcademicianProps> = ({ name, img_path }) => {
           {name}
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -39,7 +39,7 @@ const AcademicianSection = () => {
   return (
     <div className="w-full h-auto md:h-[65vh] border-b-2 border-gray-300 py-[2vh]">
       <div className="w-[93vw] mx-auto flex justify-between items-center border-b-2 border-opacity-70 border-gray-300 pb-[1vh]">
-        <h1 className="text-[6vw] items-center md:text-3xl flex text-white font-opensans [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
+        <h1 className="text-[6vw] items-center md:text-3xl flex text-textColor font-opensans [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
           <GoProject size={24} className="mr-2" />
           Akademisyenler
         </h1>
@@ -51,7 +51,7 @@ const AcademicianSection = () => {
           >
             <FaAngleLeft
               size={28}
-              className="text-white opacity-70 hover:opacity-100"
+              className="text-textColor opacity-70 hover:opacity-100"
             />
           </button>
           <button
@@ -61,7 +61,7 @@ const AcademicianSection = () => {
           >
             <FaAngleRight
               size={28}
-              className="text-white opacity-70 hover:opacity-100"
+              className="text-textColor opacity-70 hover:opacity-100"
             />
           </button>
         </div>

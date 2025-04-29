@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const MainSection = () => {
   return (
-    <div className="relative w-full h-[84vh] overflow-hidden border-b border-gray-300">
+    <div className="mt-[16vh] w-full h-[84vh] ">
       <video
         autoPlay
         loop
@@ -17,7 +17,7 @@ const MainSection = () => {
 
       <div className="absolute bottom-[10vh] left-[2vw] z-[2] text-white text-[8vw] sm:text-[4.5rem] font-bold [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
         <h1 className="mb-4 text-[8vw] sm:text-4xl md:text-5xl lg:text-7xl font-semibold font-poppins">
-          <span className="bg-gradient-to-r text-[10vw] sm:text-7xl font-opensans text-white">
+          <span className="bg-gradient-to-r text-[10vw] sm:text-7xl font-opensans ">
             Yapay Zeka
           </span>
           <div className="h-2 mt-[2vh]"></div>

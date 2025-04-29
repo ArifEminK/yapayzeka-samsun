@@ -3,7 +3,7 @@ import data from "@/public/yapay_zeka.json";
 
 const InfoAI = () => {
   return (
-    <div className="flex flex-col md:flex-row text-white opacity-70 border-b-2 border-b-gray-400">
+    <div id="info-ai" className="flex flex-col md:flex-row text-textColor opacity-70 border-b-2 border-b-gray-400">
       
       {/* Sol Taraf */}
       <div className="text-center w-full md:w-[50vw] h-auto md:h-[70vh] border-b md:border-b-0 md:border-r-[1px] border-gray-400 text-[4vw] sm:text-lg leading-[1.8] p-4 md:p-10 font-serif flex-1 shadow-lg transition-all duration-300 ease-in-out">

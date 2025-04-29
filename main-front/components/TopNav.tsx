@@ -1,63 +1,141 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import TopNavTitle from "./TopNavTitle";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import TopNavQuests from "./TopNavQuests";
 
 const TopNav = () => {
-  return (
-    <nav className="bg-topNavBg shadow-md border-b-[1px] border-b-[#70777F]">
-      <div className="max-w mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[12vh] md:h-[16vh]">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo_beyaz.png"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="h-[6vh] w-auto opacity-75"
-            />
-            <span className="hover:opacity-100 ml-2 text-[5vw] sm:text-[2.2rem] font-medium opacity-70 font-nocturne text-white">
-              Yapay Zeka
-            </span>
-          </Link>
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [isScrolled, setIsScrolled] = useState(false);
 
-          {/* Menü md ve üstü */}
-          <div className="hidden md:flex items-center space-x-8">
-            <TopNavTitle title="Bölüm Hakkında" href="/bolum-hakkinda" />
-            <TopNavTitle title="Personel" href="/personel" />
-            <TopNavTitle title="Projeler" href="/projeler" />
-            <TopNavTitle title="İletişim" href="/iletisim" />
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme as "light" | "dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
+  return (
+    <nav
+      className={`bg-defBg items-center shadow-md fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? "h-[8vh] md:h-[12vh]" : "h-[12vh] md:h-[20vh]"
+      }`}
+    >
+      <div
+        className={`w-[100%] px-4 sm:px-6 lg:px-8 ${
+          isScrolled ? "mt-[1vw]" : "mt-[3vh]"
+        },${isScrolled ? "h-[5vh] md:h-[12vh]" : "h-[8vh] md:h-[15vh]"}`}
+      >
+        <div className="flex h-full justify-between items-center ">
+          {/* Logo */}
+          <div className="flex items-center space-x-4">
+            <Link href="/" className="flex items-center  ">
+              <Image
+                src="/images/logo_beyaz.png"
+                alt="Logo"
+                width={60}
+                height={60}
+                className="h-[9vh] w-auto opacity-75"
+              />
+              <span className="hover:opacity-100 ml-[2vw] sm:text-[2.2rem] text- font-semibold opacity-70 font-nocturne text-white">
+                Yapay Zeka
+              </span>
+            </Link>
+
+            {/* Menü md ve üstü */}
+            <div className="hidden md:flex space-x-4">
+              <TopNavTitle title="Akademisyenlerimiz" href="academician" />
+              <TopNavTitle title="Projeler" href="projects" />
+              <TopNavTitle title="Haberler" href="news" />
+            </div>
           </div>
 
           {/* Search sadece md ve üstü göster */}
           <div className="hidden md:flex relative">
-            <input
-              type="text"
-              placeholder="Site içinde ara"
-              className="font-opensans w-[200px] h-[40px] px-3 py-1 text-sm text-gray-700 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-[#0D7B81]"
-            />
-            <button className="absolute right-3 top-1/2 -translate-y-1/2">
-              <svg className="h-6 w-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-              </svg>
+            <button
+              onClick={toggleTheme}
+              className="text-white hover:text-gray-300 transition-colors duration-300 p-2"
+              title="Tema Değiştir"
+            >
+              {theme === "light" ? (
+                <MdLightMode size={36} />
+              ) : (
+                <MdDarkMode size={36} className="text-specBlue" />
+              )}
             </button>
           </div>
 
           {/* Hamburger sadece mobil */}
           <div className="md:hidden flex items-center">
             <button className="p-2 text-gray-700 hover:text-[#0D7B81]">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
         </div>
       </div>
+      {isScrolled ? (
+        <></>
+      ) : (
+        <div
+          className={`w-[90vw] ml-[5vw] h-full items-center flex justify-between text-white ${
+            isScrolled ? "h-[3vh] md:h-[4vh]" : "h-[4vh] md:h-[5vh]"
+          }`}
+        >
+          <TopNavQuests
+            href="whats-ai"
+            questions="Yapay Zeka Ne Anlama Geliyor?"
+          />
+          <TopNavQuests
+            href="whats-ai"
+            questions="Yapay Zekanın Türleri Nelerdir?"
+          />
+          <TopNavQuests href="whats-ai" questions="Yapay Zeka Nasıl Öğrenir?" />
+          <TopNavQuests href="info-ai" questions="Yapay Zeka Güvenli Mi?" />
+          <TopNavQuests href="info-ai" questions="Yapay Zeka Araçları" />
+        </div>
+      )}
     </nav>
   );
 };
-
 
 export default TopNav;

@@ -36,10 +36,13 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div className="w-full border-b-2 border-gray-300 py-[2vh]">
+    <section
+      id="projects"
+      className="w-full border-b-2 border-gray-300 py-[2vh]"
+    >
       {/* Header */}
       <div className="w-[93vw] mx-auto flex justify-between items-center border-b-2 border-opacity-70 border-gray-300 pb-[1vh]">
-        <h1 className="text-[6vw] md:text-3xl items-center flex text-white font-opensans [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
+        <h1 className="text-[6vw] md:text-3xl items-center flex text-textColor font-opensans [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
           <GoProject size={24} className="mr-2" />
           Projeler
         </h1>
@@ -49,14 +52,20 @@ const ProjectsSection = () => {
             disabled={startIndex === 0}
             className="disabled:opacity-30"
           >
-            <FaAngleLeft size={28} className="text-white opacity-70 hover:opacity-100" />
+            <FaAngleLeft
+              size={28}
+              className="text-textColor opacity-70 hover:opacity-100"
+            />
           </button>
           <button
             onClick={handleNext}
             disabled={startIndex >= projeler.length - itemsPerView}
             className="disabled:opacity-30"
           >
-            <FaAngleRight size={28} className="text-white opacity-70 hover:opacity-100" />
+            <FaAngleRight
+              size={28}
+              className="text-textColor opacity-70 hover:opacity-100"
+            />
           </button>
         </div>
       </div>
@@ -82,14 +91,17 @@ const ProjectsSection = () => {
                   ? "px-[4vw] py-[3vw]"
                   : "px-[2vw] ml-[1vw] py-[1vw] w-[24vw]"
               } flex justify-center`}
-              style={{ width: isMobile ? "100vw" : `19vw`, marginLeft: isMobile ? "0.5vw" : "0.5vw" }}
+              style={{
+                width: isMobile ? "100vw" : `19vw`,
+                marginLeft: isMobile ? "0.5vw" : "0.5vw",
+              }}
             >
               <ProjectComp title={project} />
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from "react";
 
-interface TopNavTitleProps {
-  title: string;
+interface TopNavQuestsProps {
   href: string;
+  questions: string;
 }
 
-const TopNavTitle: React.FC<TopNavTitleProps> = ({ title, href }) => {
+const TopNavQuests: React.FC<TopNavQuestsProps> = ({ questions, href }) => {
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
@@ -16,15 +16,13 @@ const TopNavTitle: React.FC<TopNavTitleProps> = ({ title, href }) => {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
-
   return (
-    <button
-      onClick={() => scrollToSection(href)}
-      className="text-white dark:opacity-70 border-l-2 border-borderColor hover:opacity-100 font-nocturne px-3 py-2 text-xl font-semibold"
-    >
-      {title}
+    <button onClick={() => scrollToSection(href)}>
+      <p className="font-nocturne cursor-pointer opacity-70 hover:opacity-100">
+        {questions}
+      </p>
     </button>
   );
 };
 
-export default TopNavTitle;
+export default TopNavQuests;

@@ -12,4 +12,15 @@
   src: url("/fonts/OpenSans-Medium.ttf") format("truetype");
   font-style: normal;
 }
- 
+:root {
+  --color-topNavBg: #ffffff;
+  --color-homeContBg: #f4f7fa;
+  --color-specBlue: #5d738a;
+  --color-textColor: #000000;
+}
+.dark {
+  --color-topNavBg: #1c2a36;
+  --color-homeContBg: #0f1a24;
+  --color-specBlue: #064176;
+  --color-textColor: #ffffff;
+}

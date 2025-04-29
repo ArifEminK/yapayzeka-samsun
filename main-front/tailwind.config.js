@@ -15,11 +15,12 @@ module.exports = {
         bgvideo: "url('/videos/bg_video.png')",
       },
       colors: {
-        topNavBg: "#1C2A36",
-        homeContBg: "#0F1A24",
-        specBlue: {
-          100: "#064176",
-        },
+        topNavBg: "var(--color-topNavBg)",
+        homeContBg: "var(--color-homeContBg)",
+        specBlue: "var(--color-specBlue)",
+        textColor: "var(--color-textColor)",
+        defBg: "#1C2A36",
+        borderColor:"#70777F"
       },
       fontFamily: {
         nocturne: ['"Nocturne"', "serif"],
@@ -27,5 +28,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

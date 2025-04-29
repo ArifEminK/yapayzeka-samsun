@@ -21,9 +21,11 @@ export default function RootLayout({}: Readonly<{
           <TopNav />
           <Home />
         </div>
-        <footer className="bg-gray-900 text-gray-400 py-8">
+        <footer className="bg-topNavBg text-textColor py-8">
           <div className="container mx-auto px-4 text-center">
-            <p>&copy; 2024 Yapay Zeka Samsun. Tüm hakları saklıdır.</p>
+            <p className="font-opensans">
+              &copy; 2024 Yapay Zeka Samsun. Tüm hakları saklıdır.
+            </p>
           </div>
         </footer>
       </body>

@@ -36,10 +36,10 @@ const NewsSection = () => {
   };
 
   return (
-    <div className="w-full border-b-2 border-gray-300 py-[2vh]">
+    <section id="news" className="w-full border-b-2 border-gray-300 py-[2vh]">
       {/* Header */}
       <div className="w-[93vw] mx-auto flex justify-between items-center border-b-2 border-opacity-70 border-gray-300 pb-[1vh]">
-        <h1 className="text-[6vw] md:text-3xl items-center flex text-white font-opensans [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
+        <h1 className="text-[6vw] md:text-3xl items-center flex text-textColor font-opensans [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
           <FaNewspaper size={24} className="mr-2" />
           Haberler
         </h1>
@@ -51,7 +51,7 @@ const NewsSection = () => {
           >
             <FaAngleLeft
               size={28}
-              className="text-white opacity-70 hover:opacity-100"
+              className="text-textColor opacity-70 hover:opacity-100"
             />
           </button>
           <button
@@ -61,7 +61,7 @@ const NewsSection = () => {
           >
             <FaAngleRight
               size={28}
-              className="text-white opacity-70 hover:opacity-100"
+              className="text-textColor opacity-70 hover:opacity-100"
             />
           </button>
         </div>
@@ -98,7 +98,7 @@ const NewsSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
