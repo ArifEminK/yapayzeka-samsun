@@ -18,7 +18,7 @@ const TopNavQuests: React.FC<TopNavQuestsProps> = ({ questions, href }) => {
   };
   return (
     <button onClick={() => scrollToSection(href)}>
-      <p className="font-nocturne cursor-pointer opacity-70 hover:opacity-100">
+      <p className="font-PTSans text-xl cursor-pointer opacity-70 hover:opacity-100">
         {questions}
       </p>
     </button>

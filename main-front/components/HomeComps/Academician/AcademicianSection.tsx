@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Academician from "./Academician";
 import { GoProject } from "react-icons/go";

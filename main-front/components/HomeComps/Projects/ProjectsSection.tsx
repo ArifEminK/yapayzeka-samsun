@@ -1,6 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import ProjectComp from "./ProjectComp";
+import React, { useState, useEffect } from "react"; 
 import { GoProject } from "react-icons/go";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import data from "@/public/yapay_zeka.json";
@@ -96,7 +95,7 @@ const ProjectsSection = () => {
                 marginLeft: isMobile ? "0.5vw" : "0.5vw",
               }}
             >
-              <ProjectComp title={project} />
+              {/* <ProjectComp title={project} /> */}
             </div>
           ))}
         </div>

@@ -5,10 +5,15 @@ import Image from "next/image";
 import TopNavTitle from "./TopNavTitle";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import TopNavQuests from "./TopNavQuests";
+import { usePathname } from "next/navigation";
+import { TypeAnimation } from "react-type-animation";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const TopNav = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -46,7 +51,7 @@ const TopNav = () => {
   return (
     <nav
       className={`bg-defBg items-center shadow-md fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "h-[8vh] md:h-[12vh]" : "h-[12vh] md:h-[20vh]"
+        isScrolled ? "h-[8vh] md:h-[15vh]" : "h-[12vh] md:h-[20vh]"
       }`}
     >
       <div
@@ -55,27 +60,60 @@ const TopNav = () => {
         },${isScrolled ? "h-[5vh] md:h-[12vh]" : "h-[8vh] md:h-[15vh]"}`}
       >
         <div className="flex h-full justify-between items-center ">
-          {/* Logo */}
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center  ">
-              <Image
-                src="/images/logo_beyaz.png"
-                alt="Logo"
-                width={60}
-                height={60}
-                className="h-[9vh] w-auto opacity-75"
-              />
-              <span className="hover:opacity-100 ml-[2vw] sm:text-[2.2rem] text- font-semibold opacity-70 font-nocturne text-white">
-                Yapay Zeka
-              </span>
+              {isScrolled! == false ? (
+                <Image
+                  src="/images/logo_beyaz.png"
+                  alt="Logo"
+                  width={60}
+                  height={60}
+                  className={` w-auto opacity-75 ${
+                    isHome == true ? "h-[10vh]" : "h-[8vh]"
+                  }`}
+                />
+              ) : (
+                <div></div>
+              )}
+              {isHome == true ? (
+                <span className="hover:opacity-100 ml-[2vw] sm:text-[2.2rem] font-semibold opacity-70 font-PTSans text-white">
+                  Yapay Zeka
+                </span>
+              ) : (
+                <div className="relative ml-[1vw] opacity-70 hover:opacity-100 border-2 border-borderColor w-[16vw] h-[6vh]">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/videos/back-bg.mp4" type="video/mp4" />
+                  </video>
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center pl-[1vw]">
+                    <FaArrowLeft size={"2vw"} className="text-white" />
+                    <TypeAnimation
+                      sequence={["geri dön", 1000, " ", 500]}
+                      wrapper="span"
+                      speed={10}
+                      repeat={Infinity}
+                      className="text-white ml-[0.5vw] sm:text-xl font-code"
+                    />
+                  </div>
+                </div>
+              )}
             </Link>
 
             {/* Menü md ve üstü */}
-            <div className="hidden md:flex space-x-4">
-              <TopNavTitle title="Akademisyenlerimiz" href="academician" />
-              <TopNavTitle title="Projeler" href="projects" />
-              <TopNavTitle title="Haberler" href="news" />
-            </div>
+            {isHome == true ? (
+              <div className="hidden md:flex space-x-4">
+                <TopNavTitle title="Akademisyenlerimiz" href="academician" />
+                <TopNavTitle title="Projeler" href="projects" />
+                <TopNavTitle title="Haberler" href="news" />
+              </div>
+            ) : (
+              <div></div>
+            )}
           </div>
 
           {/* Search sadece md ve üstü göster */}
@@ -88,8 +126,11 @@ const TopNav = () => {
               {theme === "light" ? (
                 <MdLightMode size={36} />
               ) : (
-                <MdDarkMode size={36} className="text-specBlue" />
+                <MdDarkMode size={36} className="text-white" />
               )}
+            </button>
+            <button className="text-white hover:text-gray-300 transition-colors duration-300 p-2">
+              <h1 className="text-2xl">EN</h1>
             </button>
           </div>
 
@@ -113,27 +154,19 @@ const TopNav = () => {
           </div>
         </div>
       </div>
-      {isScrolled ? (
-        <></>
-      ) : (
-        <div
-          className={`w-[90vw] ml-[5vw] h-full items-center flex justify-between text-white ${
-            isScrolled ? "h-[3vh] md:h-[4vh]" : "h-[4vh] md:h-[5vh]"
-          }`}
-        >
-          <TopNavQuests
-            href="whats-ai"
-            questions="Yapay Zeka Ne Anlama Geliyor?"
-          />
-          <TopNavQuests
-            href="whats-ai"
-            questions="Yapay Zekanın Türleri Nelerdir?"
-          />
-          <TopNavQuests href="whats-ai" questions="Yapay Zeka Nasıl Öğrenir?" />
-          <TopNavQuests href="info-ai" questions="Yapay Zeka Güvenli Mi?" />
-          <TopNavQuests href="info-ai" questions="Yapay Zeka Araçları" />
-        </div>
-      )}
+      <div
+        className={`w-[80vw] ml-[10vw] h-full items-center flex justify-between text-white ${
+          isScrolled ? "h-[3vh] md:h-[1vh]" : "h-[4vh] md:h-[5vh]"
+        }`}
+      >
+        <TopNavQuests href="whats-ai" questions="Yapay Zeka Nedir?" />
+        <TopNavQuests href="ai-safety" questions="Yapay Zeka Güvenli Mi?" />
+        <TopNavQuests
+          href="ai-using"
+          questions="Yapay Zeka Nasıl Kullanılıyor?"
+        />
+        <TopNavQuests href="ai-history" questions="Yapay Zekanın Tarihçesi" />
+      </div>
     </nav>
   );
 };

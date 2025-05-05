@@ -1,0 +1,121 @@
+{
+  "AI Info": {
+    "Questions": {
+      "1": "What Does Artificial Intelligence Mean?",
+      "2": "What Are the Types of AI?",
+      "3": "How Does AI Learn?",
+      "4": "Is AI Safe?",
+      "5": "AI Tools",
+      "6": "What Is the Turing Test?",
+      "7": "What Is the Future of AI?",
+      "8": "Democratic Rights?",
+      "9": "Governance?",
+      "10": "Global Health?",
+      "11": "Environment",
+      "12": "Society",
+      "13": "Global Health, Medicine, and Diseases",
+      "14": "Human Society, Culture, and Creativity",
+      "15": "Nature, Climate, and the Universe",
+      "16": "Politics, Business, and Economy",
+      "17": "Technology and the Future",
+      "18": "Have You Ever Wondered Where AI Came From?"
+    },
+    "Answers": {
+      "1": "AI, or artificial intelligence... We’ve all heard the term. But what does it really mean? Is it just a passing tech trend, or a lasting transformation shaping our future?",
+      "2": "We often hear terms like machine learning, deep learning, and generative AI alongside artificial intelligence. But what do these actually mean? What are the differences?",
+      "3": "What does it mean for an AI to 'learn'? Can computers really learn?",
+      "4": "AI safety depends on whether systems operate predictably, under supervision, and with human control. In the short term, safety involves accuracy, fairness, and privacy. For the long term, autonomous decision-making raises the need for control and oversight. AI can be safe if developed properly, but it requires transparency, ethical standards, and constant monitoring.",
+      "5": "AI tools play a transformative role today across domains from research to industry. These tools perform tasks such as data analysis, automation, natural language processing, and image recognition. Key AI tools include:",
+      "6": "Can you tell a machine apart from a human just through conversation? The Turing Test is one of the most iconic ways to question whether machines are truly intelligent.",
+      "7": "Will robots take over the world? Or will AI take your job? The answer is complicated.",
+      "8": "How does AI affect democratic rights, and can it be used to influence elections?",
+      "9": "What happens if we fail to govern AI, and what does good AI governance look like?",
+      "10": "AI has great potential in healthcare. But what are the possible risks and pitfalls?",
+      "11": "How does AI impact the environment? Do its negative effects outweigh its potential for good?",
+      "12": "What are the effects of AI on society? What happens if we don’t control or manage it?",
+      "13": "Discover how AI is used in diagnosing psychiatric disorders and predicting pandemic spread.",
+      "14": "See how experts are questioning AI ethics and how AI is used to create symphonies and exhibitions.",
+      "15": "Learn how researchers use AI to decipher whale language and search for life on Mars.",
+      "16": "Explore how global experts investigate the impact of AI on economics, business, and politics.",
+      "17": "Discover how researchers are shaping the future using AI in autonomous vehicles, clean energy, and ecosystem monitoring.",
+      "18": "Explore the historical timeline of AI from its origins in the 1950s to today’s global AI summits and applications."
+    },
+    "Tools": [
+      "Machine Learning (ML) and Deep Learning Tools",
+      "Natural Language Processing (NLP) Tools",
+      "Computer Vision and Image Processing",
+      "Data Analytics and Big Data Tools",
+      "Autonomous Systems and Robotics",
+      "Speech and Voice Processing"
+    ]
+  },
+  "Projects": {
+    "Questions": {
+      "1": "AI in Medicine",
+      "2": "AI Projects in Aerospace",
+      "3": "AI in Geography and Philosophy",
+      "4": "AI in Economy and Finance",
+      "5": "AI in Engineering"
+    },
+    "Answers": {
+      "1": "In medicine, AI is used in diagnosis, medical imaging (X-rays, MRIs, CT scans), personalized treatment planning, drug discovery, and patient monitoring. AI-powered assistants and early diagnosis systems are transforming healthcare.",
+      "2": "AI is widely used in aviation and space tech—such as air traffic optimization, autonomous drones, satellite image analysis, spacecraft navigation, and fault prediction.",
+      "3": "In geography, AI is used for climate modeling, disaster prediction, land classification, and map generation. In philosophy, AI enables simulations and algorithms that explore abstract ideas like consciousness, ethics, and decision-making.",
+      "4": "In financial markets, AI is revolutionary: algorithmic trading, credit scoring, fraud detection, customer behavior prediction, and automated portfolio management are just a few applications.",
+      "5": "In engineering, AI is used for smart manufacturing, fault prediction, robotic automation, structural analysis, and Industry 4.0. AI-powered CAD systems and digital twin technologies are making processes more efficient."
+    }
+  },
+  "News": {
+    "0": "Digital Twin with AI",
+    "1": "Digital Twin with AI",
+    "2": "Digital Twin with AI",
+    "3": "Digital Twin with AI",
+    "4": "Digital Twin with AI",
+    "5": "Digital Twin with AI",
+    "6": "Digital Twin with AI",
+    "7": "Digital Twin with AI",
+    "8": "Digital Twin with AI",
+    "9": "Digital Twin with AI",
+    "10": "Digital Twin with AI"
+  },
+  "Academics": {
+    "names": {
+      "1": "Assoc. Prof. Zafer Cömert",
+      "2": "Assoc. Prof. Muammer Türkoğlu",
+      "3": "Assoc. Prof. Abdulkadir Karacı",
+      "4": "Dr. Lecturer Özgür TONKAL",
+      "5": "Dr. Lecturer Nurettin ŞENYER",
+      "6": "Res. Asst. Ömer DURMUŞ",
+      "7": "Res. Asst. Ferhat ARAT"
+    },
+    "img_path": [
+      "/images/academics/zafer.comert.png",
+      "/images/academics/muammer.turkoglu.png",
+      "/images/academics/abdulkadir.karaci.png",
+      "/images/academics/ozgur.tonkal.png",
+      "/images/academics/default.png",
+      "/images/academics/omer.durmus.png",
+      "/images/academics/ferhat.arat.png"
+    ]
+  },
+  "Content": {
+    "Questions": {
+      "1": "What Does Artificial Intelligence Mean?",
+      "2": "What Are the Types of AI?",
+      "3": "How Does AI Learn?",
+      "4": "Is AI Safe?",
+      "5": "AI Tools",
+      "6": "What Is the Turing Test?",
+      "7": "What Is the Future of AI?"
+    },
+    "Answers": {
+      "1": "Artificial intelligence, in the simplest terms, is technology that enables machines to make human-like decisions. But it goes far beyond simple 'if-then' logic. Modern AI systems can learn (machine learning), reason (NLP and planning), see (computer vision), and even be creative (generative AI). AI is no longer a luxury—it's a necessity, transforming fields like healthcare, finance, and production. Although it has yet to fully reach emotional intelligence, it is a strategic partner in innovation.",
+      "2": "AI is categorized into types like 1. Machine Learning (learning from data), 2. Deep Learning (learning patterns through neural networks), and 3. Generative AI (creating text, visuals, music). These types power AI use in health, education, agriculture, and more.",
+      "3": "AI learns by finding patterns in data. This learning happens in three ways: supervised learning (with labeled data), unsupervised learning (discovering hidden patterns), and reinforcement learning (trial and error using rewards). These methods help AI improve over time.",
+      "4": "AI safety depends on systems being predictable and controllable. In the short term, accuracy, fairness, and privacy are key; in the long term, controlling autonomous decisions is critical. Properly developed AI can be safe, but it must follow ethical standards and be transparently monitored.",
+      "5": "AI tools support data analysis, image processing, voice recognition, NLP, and more. Major tools include ML platforms, NLP libraries, image processing algorithms, robotics software, and AI-powered development environments—used in research, production, and beyond.",
+      "6": "The Turing Test determines if a machine can think like a human. A human evaluator converses via text with a machine and another human, and tries to identify who is who. If the evaluator can't tell them apart, the machine passes. It's a key measure of human-like AI behavior.",
+      "7": "The future of AI lies in systems that work seamlessly with human intelligence. AI is revolutionizing everything from automation to education. But for it to remain safe and beneficial, it requires global collaboration, regulation, and constant oversight."
+    }
+  }
+}
