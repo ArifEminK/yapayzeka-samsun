@@ -54,17 +54,17 @@ const WhatsAI = () => {
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[8]}
             text={data["Yapay Zeka Info"].Cevaplar[8]}
-            imgUrl="/img/background/ai-quest1.png"
+            imgUrl="/img/whatsai/ai-quest1.png"
           />
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[9]}
             text={data["Yapay Zeka Info"].Cevaplar[9]}
-            imgUrl="/img/background/ai-quest2.png"
+            imgUrl="/img/whatsai/ai-quest2.png"
           />
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[10]}
             text={data["Yapay Zeka Info"].Cevaplar[10]}
-            imgUrl="/img/background/ai-quest3.png"
+            imgUrl="/img/whatsai/ai-quest3.png"
           />
         </Link>
         <Link
@@ -79,7 +79,7 @@ const WhatsAI = () => {
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[12]}
             text={data["Yapay Zeka Info"].Cevaplar[12]}
-            imgUrl="/img/background/ai-quest5.png"
+            imgUrl="/img/whatsai/ai-quest5.png"
           />
         </Link>
       </section>
@@ -92,17 +92,17 @@ const WhatsAI = () => {
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[13]}
             text={data["Yapay Zeka Info"].Cevaplar[13]}
-            imgUrl="/img/background/ai-using1.png"
+            imgUrl="/img/whatsai/ai-using1.png"
           />
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[14]}
             text={data["Yapay Zeka Info"].Cevaplar[14]}
-            imgUrl="/img/background/ai-using2.png"
+            imgUrl="/img/whatsai/ai-using2.png"
           />
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[15]}
             text={data["Yapay Zeka Info"].Cevaplar[15]}
-            imgUrl="/img/background/ai-using3.png"
+            imgUrl="/img/whatsai/ai-using3.png"
           />
         </Link>
         <Link
@@ -132,7 +132,7 @@ const WhatsAI = () => {
           <QuestionComp
             title={data["Yapay Zeka Info"].Sorular[18]}
             text={data["Yapay Zeka Info"].Cevaplar[18]}
-            imgUrl="/img/background/ai-history.png"
+            imgUrl="/img/whatsai/ai-history.png"
           />
         </div>
       </Link>
