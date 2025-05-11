@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { FaAnglesRight } from "react-icons/fa6";
 
 interface ProjectCompProps {
   title: string;
@@ -44,11 +43,13 @@ const ProjectComp: React.FC<ProjectCompProps> = ({ title, text, imgUrl }) => {
     //   </div>
     // </div>
     <div className="h-[24vw] w-[26vw] text-center group hover:cursor-pointer">
-      <div className="h-[18vw] ">
-        <img
+      <div className="h-[18vw] relative">
+        <Image
           src={imgUrl}
           alt={title}
-          className="w-[26vw] h-[18vw] object-cover"
+          fill
+          className="object-cover w-[26vw] h-[18vw]"
+          sizes="(max-width: 768px) 100vw, 26vw"
         />
       </div>
       <div className="h-[6vw] mt-[2vh] text-start">

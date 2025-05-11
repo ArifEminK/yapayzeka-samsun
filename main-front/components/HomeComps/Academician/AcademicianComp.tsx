@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface AcademicianCompProps {
@@ -8,11 +9,13 @@ interface AcademicianCompProps {
 const AcademicianComp: React.FC<AcademicianCompProps> = ({ title, imgUrl }) => {
   return (
     <div className="h-[20vw] text-center group hover:cursor-pointer">
-      <div className="h-[18vw] ">
-        <img
+      <div className="h-[18vw] relative">
+        <Image
           src={imgUrl}
           alt={title}
-          className="w-[26vw] border-2 border-black h-[18vw] object-contain"
+          fill
+          className="object-cover w-[26vw] h-[18vw]"
+          sizes="(max-width: 768px) 100vw, 26vw"
         />
       </div>
       <div className="h-[2vw] mt-[2vh] text-start">

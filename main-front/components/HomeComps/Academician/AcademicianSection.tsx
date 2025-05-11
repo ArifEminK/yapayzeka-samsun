@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Academician from "./Academician";
-import { GoProject } from "react-icons/go";
+import Academician from "./Academician"; 
 import data from "@/public/yapay_zeka.json";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 

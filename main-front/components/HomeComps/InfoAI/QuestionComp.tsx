@@ -8,7 +8,7 @@ interface QuestionCompProps {
   videoUrl?: string;
   imgUrl?: string;
   listItems?: string[];
-  linkDiv?: Boolean;
+  linkDiv?: boolean;
 }
 
 const QuestionComp: React.FC<QuestionCompProps> = ({
