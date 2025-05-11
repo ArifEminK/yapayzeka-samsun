@@ -13,6 +13,10 @@ module.exports = {
         bg3: "url('/img/background/using.png')",
         bg4: "url('/img/background/ai-historybg.png')",
         bg5: "url('/img/contentimg/whatsai.png')",
+        bg6: "url('/img/engineering/faculty3.png')",
+        bg7: "url('/img/background/engineering.png')",
+        bg8: "url('/img/background/softwarebg.png')",
+        bg9: "url('/img/background/machinebg.png')"
       },
       colors: {
         topNavBg: "var(--color-topNavBg)",
@@ -35,6 +39,16 @@ module.exports = {
       },
     },
   },
-  safelist: ["bg-bg1", "bg-bg2", "bg-bg3", "bg-bg4", "bg-bg5"],
+  safelist: [
+    "bg-bg1",
+    "bg-bg2",
+    "bg-bg3",
+    "bg-bg4",
+    "bg-bg5",
+    "bg-bg6",
+    "bg-bg7",
+    "bg-bg8",
+    "bg-bg9",
+  ],
   plugins: [require("@tailwindcss/line-clamp")],
 };

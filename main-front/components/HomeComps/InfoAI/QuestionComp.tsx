@@ -8,6 +8,7 @@ interface QuestionCompProps {
   videoUrl?: string;
   imgUrl?: string;
   listItems?: string[];
+  linkDiv?: Boolean;
 }
 
 const QuestionComp: React.FC<QuestionCompProps> = ({
@@ -16,6 +17,7 @@ const QuestionComp: React.FC<QuestionCompProps> = ({
   videoUrl,
   imgUrl,
   listItems,
+  linkDiv = true,
 }) => {
   return (
     <div className="w-full flex flex-col items-center group transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
@@ -41,17 +43,21 @@ const QuestionComp: React.FC<QuestionCompProps> = ({
           />
         ) : null}
         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-        <div className="absolute top-[1vh] right-[1vh] h-[5vh] opacity-75 w-[4.5vh] group-hover:w-[7vw] flex flex-row items-center  bg-topNavBg rounded-xl z-20 transition-all duration-300 ease-in-out ">
-          <button className="p-[0.35vw]">
-            <FaLink size={"1.5vw"} className="text-textColor" />
-          </button>
-          <span className="line-clamp-1 text-textColor text-[0.9vw] font-bold px-[0.3vw] text-center opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 ease-out">
-            Linke Git
-          </span>
-        </div>
+        {linkDiv ? (
+          <div className="absolute top-[1vh] right-[1vh] h-[5vh] opacity-75 w-[4.5vh] group-hover:w-[7vw] flex flex-row items-center  bg-topNavBg rounded-xl z-20 transition-all duration-300 ease-in-out ">
+            <button className="p-[0.35vw]">
+              <FaLink size={"1.5vw"} className="text-textColor" />
+            </button>
+            <span className="line-clamp-1 text-textColor text-[0.9vw] font-bold px-[0.3vw] text-center opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 ease-out">
+              Linke Git
+            </span>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="mt-4 opacity-80 group-hover:opacity-100 text-center">
-        <h3 className="text-[6vw] sm:text-2xl font-opensans text-textColor mb-2 pb-2 border-b-2 border-topNavBg w-full group-hover:border-b-borderColor">
+        <h3 className="relative text-[6vw] sm:text-2xl font-opensans text-textColor mb-2 pb-2 w-full group-hover:before:scale-x-100 before:transition-transform before:duration-200 before:ease-out before:origin-center before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-borderColor">
           {title}
         </h3>
         <p className="text-textColor font-opensans text-[4vw] sm:text-[1.2rem]  mt-2">

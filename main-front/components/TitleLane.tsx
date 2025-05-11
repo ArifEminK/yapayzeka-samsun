@@ -11,7 +11,7 @@ const TitleLane: React.FC<TitleLaneProps> = ({ title, bg }) => {
       className={`opacity-80 bg-cover bg-fixed bg-center h-[24vh] flex justify-center items-center w-full bg-${bg}`}
     >
       <h1
-        className="text-white font-sans text-[8vw] sm:text-[4.5rem] font-bold z-[2] text-center"
+        className="text-white font-sans text-[8vw] sm:text-[4.2vw] font-bold z-[2] text-center"
         style={{
           textShadow: "1px 1px 3px rgba(0,0,0,0.9)",
         }}

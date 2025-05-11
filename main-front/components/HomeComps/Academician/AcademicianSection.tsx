@@ -22,7 +22,7 @@ const AcademicianSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cardWidth = isMobile ? 100 : 19;
+  const cardWidth = isMobile ? 100 : 24;
   const itemsPerView = isMobile ? 1 : 4;
 
   const handleNext = () => {
@@ -38,11 +38,15 @@ const AcademicianSection = () => {
   };
 
   return (
-    <div className="w-full h-auto md:h-[65vh] border-b-2 border-gray-300 py-[2vh]">
-      <div className="w-[93vw] mx-auto flex justify-between items-center border-b-2 border-opacity-70 border-gray-300 pb-[1vh]">
-        <h1 className="text-[6vw] items-center md:text-3xl flex text-textColor font-opensans [text-shadow:2px_2px_4px_rgba(0,0,0,0.7)]">
-          <GoProject size={24} className="mr-2" />
-          Akademisyenler
+    <div className="w-full flex flex-row items-center h-auto md:h-[65vh] border-b-2 border-gray-300 py-[2vh]">
+      {/* <div className="w-[93vw] h-[10vh] mx-auto flex justify-between items-center border-b-2 border-opacity-70 border-gray-300 pb-[1vh]">
+        <h1
+          className="text-textColor font-sans text-[2vw] sm:text-[2vw] font-bold z-[2] text-center"
+          style={{
+            textShadow: "1px 1px 3px rgba(0,0,0,0.9)",
+          }}
+        >
+          Yapay Zeka Üzerine Çalışan Akademisyenlerimiz
         </h1>
         <div className="flex items-center">
           <button
@@ -66,9 +70,19 @@ const AcademicianSection = () => {
             />
           </button>
         </div>
-      </div>
+      </div> */}
 
-      <div className="w-full overflow-hidden">
+      <button
+        onClick={handlePrev}
+        disabled={startIndex === 0}
+        className="disabled:opacity-30"
+      >
+        <FaAngleLeft
+          size={28}
+          className="text-textColor opacity-70 hover:opacity-100"
+        />
+      </button>
+      <div className="w-[95vw] flex-row flex overflow-hidden">
         <div
           className="flex transition-transform duration-500"
           style={{
@@ -84,15 +98,27 @@ const AcademicianSection = () => {
             <div
               key={index}
               className={`flex-shrink-0 ${
-                isMobile ? "px-[4vw] py-[3vw]" : "px-[1vw] ml-[1vw] py-[1vw] w-[24vw]"
+                isMobile
+                  ? "px-[4vw] py-[3vw]"
+                  : "px-[1vw] py-[1vw] w-[24vw]"
               } flex justify-center`}
-              style={{ width: isMobile ? "100vw" : ` ` }}
+              style={{ width: isMobile ? "100vw" : ` ${cardWidth}vw` }}
             >
               <Academician name={name} img_path={academicianImg[index]} />
             </div>
           ))}
         </div>
       </div>
+      <button
+        onClick={handleNext}
+        disabled={startIndex >= academicianNames.length - itemsPerView}
+        className="disabled:opacity-30"
+      >
+        <FaAngleRight
+          size={28}
+          className="text-textColor opacity-70 hover:opacity-100"
+        />
+      </button>
     </div>
   );
 };

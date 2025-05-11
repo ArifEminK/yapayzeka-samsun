@@ -1,24 +1,8 @@
 {
-  "Yapay Zeka Info": {
-    "Sorular": {
-      "1": "Yapay Zeka Ne Anlama Geliyor?",
-      "2": "Yapay Zekanın Türleri Nelerdir?",
-      "3": "Yapay Zeka Nasıl Öğrenir?",
-      "4": "Yapay Zeka Güvenli Mi?",
-      "5": "Yapay Zeka Araçları",
-      "6": "Turing Testi Nedir?",
-      "7": "Yapay zekanın geleceği ne olacak?",
-      "8": "Demokratik Haklar?",
-      "9": "Yönetim?",
-      "10": "Küresel Sağlık?",
-      "11": "Çevre",
-      "12": "Toplum",
-      "13": "Küresel sağlık, tıp ve hastalıklar ",
-      "14": "İnsan toplumu, kültür ve yaratıcılık",
-      "15": "Doğa, iklim ve evren",
-      "16": "Siyaset, iş dünyası ve ekonomi",
-      "17": "Teknoloji ve Gelecek",
-      "18": "Yapay zekanın nereden geldiğini hiç merak ettiniz mi ?"
+  "Content": {
+    "Metin": {
+      "1": "Samsun Üniversitesi Mühendislik Fakültesi, yapay zekâ alanında hem bilimsel araştırmalar hem de uygulamalı çalışmalar yürüterek bu teknolojiyi eğitim, sanayi ve toplum yararına kullanmayı hedeflemektedir. Fakülte bünyesinde yapay zekâ destekli sistem tasarımı, veri analizi, uzaktan eğitim uygulamaları, enerji verimliliği ve otomasyon gibi çeşitli alanlarda projeler geliştirilmekte; bu projeler TÜBİTAK başta olmak üzere farklı kurumlar tarafından desteklenmektedir. Öğrencilerin yapay zekâ temelli çözümler üretmeleri teşvik edilmekte, düzenlenen fuar ve etkinliklerde projelerini tanıtmalarına olanak sağlanmaktadır. Ayrıca, Sürekli Eğitim Merkezi aracılığıyla hem öğrencilere hem de idari personele yönelik üretken yapay zekâ, siber güvenlik, veri analitiği gibi konularda eğitimler verilmekte; bu sayede yapay zekânın farklı disiplinlerle entegrasyonu desteklenmektedir. Fakülte, gerçekleştirdiği akademik çalıştaylar ve seminerlerle de yükseköğretimde yapay zekânın yenilikçi kullanımlarını tartışmaya açmakta ve bu alandaki farkındalığı artırmaktadır.",
+      "2": ""
     },
     "Cevaplar": {
       "1": "AI, yani yapay zeka… Hepimiz bu terimi bir şekilde duymuşuzdur. Peki, yapay zeka gerçekten neyi ifade ediyor? Sadece geçici bir teknoloji trendi mi, yoksa geleceğimizi şekillendiren kalıcı bir dönüşüm mü?",
@@ -63,14 +47,7 @@
       "3": "Coğrafyada yapay zeka, iklim modellemesi, afet tahmini, arazi sınıflandırması ve harita üretiminde kullanılırken; felsefede AI, bilinç, etik, karar verme gibi soyut kavramlar üzerine simülasyonlar ve algoritmalar geliştirilmesine olanak sağlamaktadır. ",
       "4": "Finansal piyasalarda yapay zeka; algoritmik trade, kredi skorlama, dolandırıcılık tespiti, müşteri davranış tahmini ve otomatik portföy yönetimi gibi birçok alanda devrim yaratmıştır. Büyük veriden elde edilen içgörülerle yatırım stratejileri geliştirilmektedir.",
       "5": "Mühendislikte yapay zeka; akıllı üretim sistemleri, arıza tahminleme, robotik otomasyon, yapısal analiz ve endüstri 4.0 gibi birçok uygulamada yer almaktadır. AI destekli CAD sistemleri ve dijital ikiz teknolojileriyle mühendislik süreçleri daha verimli hale getirilmektedir."
-    },
-    "img_path": [
-      "/images/project1.png",
-      "/images/project1.png",
-      "/images/project1.png",
-      "/images/project1.png",
-      "/images/project1.png"
-    ]
+    }
   },
   "Haberler": {
     "0": "Yapay Zekayla Dijital İkizi",
@@ -87,58 +64,22 @@
   },
   "Akademisyenler": {
     "names": {
-      "1": "Prof. Dr. Hüseyin DEMİR",
-      "2": "Doç. Dr. Zafer Cömert",
-      "3": "Doç. Dr. Muammer Türkoğlu",
-      "4": "Doç. Dr. Abdulkadir Karacı",
-      "5": "Dr. Öğr. Üyesi Alper KARADENİZ",
-      "6": "Dr. Öğr. Üyesi Deniz KÜÇÜK",
-      "7": "Dr. Öğr. Üyesi Emel SOYLU",
-      "8": "Dr. Öğr. Üyesi İlker GÜR",
-      "9": "Dr. Öğr. Üyesi Nurettin ŞENYER",
-      "10": "Dr. Öğr. Üyesi Özgür TONKAL",
-      "11": "Dr. Öğr. Üyesi Selçuk ÇAKMAK",
-      "12": "Arş. Gör. Ferhat ARAT",
-      "13": "Arş. Gör. Furkan Can DEMİRCAN",
-      "14": "Arş. Gör. Ömer DURMUŞ",
-      "15": "Arş. Gör. Sarp ÇOBAN"
+      "1": "Doç. Dr. Zafer Cömert",
+      "2": "Doç. Dr. Muammer Türkoğlu",
+      "3": "Doç. Dr. Abdulkadir Karacı",
+      "4": "Dr. Öğr. Üyesi Özgür TONKAL",
+      "5": "Dr. Öğr. Üyesi Nurettin ŞENYER",
+      "6": "Arş. Gör. Ömer DURMUŞ",
+      "7": "Arş. Gör. Ferhat ARAT"
     },
     "img_path": [
-      "/images/akademisyenler/software/huseyin.demir.png",
-      "/images/akademisyenler/software/zafer.comert.png",
-      "/images/akademisyenler/software/muammer.turkoglu.png",
-      "/images/akademisyenler/software/abdulkadir.karaci.png",
-      "/images/akademisyenler/software/alper.karadeniz.png",
-      "/images/akademisyenler/software/deniz.kucuk.png",
-      "/images/akademisyenler/software/emel.soylu.png",
-      "/images/akademisyenler/software/ilker.gür.png",
-      "/images/akademisyenler/software/default.png",
-      "/images/akademisyenler/software/ozgur.tonkal.png",
-      "/images/akademisyenler/software/selcuk.cakmak.png",
-      "/images/akademisyenler/software/ferhat.arat.png",
-      "/images/akademisyenler/software/furkancan.demircan.png",
-      "/images/akademisyenler/software/omer.durmus.png",
-      "/images/akademisyenler/software/sarp.coban.png"
+      "/images/akademisyenler/zafer.comert.png",
+      "/images/akademisyenler/muammer.turkoglu.png",
+      "/images/akademisyenler/abdulkadir.karaci.png",
+      "/images/akademisyenler/ozgur.tonkal.png",
+      "/images/akademisyenler/default.png",
+      "/images/akademisyenler/omer.durmus.png",
+      "/images/akademisyenler/ferhat.arat.png"
     ]
-  },
-  "Content": {
-    "Sorular": {
-      "1": "Yapay Zeka Ne Anlama Geliyor?",
-      "2": "Yapay Zekanın Türleri Nelerdir?",
-      "3": "Yapay Zeka Nasıl Öğrenir?",
-      "4": "Yapay Zeka Güvenli Mi?",
-      "5": "Yapay Zeka Araçları",
-      "6": "Turing Testi Nedir?",
-      "7": "Yapay zekanın geleceği ne olacak?"
-    },
-    "Cevaplar": {
-      "1": "Yapay zeka, en basit tanımıyla makinelerin insan benzeri kararlar alabilmesini sağlayan bir teknolojidir. Ancak bu, basit bir 'if-then' (eğer-ise) mantığından çok daha ötesine uzanır. Modern AI sistemleri: öğrenebilir (Makine Öğrenimi), mantık yürütebilir (NLP ve planlama algoritmaları), görebilir (Bilgisayarlı Görü) ve hatta yaratıcılık gösterebilir (Generative AI). AI artık bir lüks değil, bir gereklilik. Sağlıkta erken teşhis, finansta dolandırıcılık tespiti, üretimde akıllı otomasyon gibi alanlarda çığır açıyor. Ancak henüz insan sezgisine ve duygusal zekaya tam olarak ulaşamasa da, stratejik bir iş birliği aracı olarak görülmelidir.",
-      "2": "Yapay zeka kendi içinde farklı türlere ayrılır. Bunlar arasında en yaygın olanları: 1. Makine Öğrenmesi (verilerden öğrenerek tahmin yapar), 2. Derin Öğrenme (sinir ağları ile daha karmaşık örüntüler öğrenir), 3. Üretken Yapay Zeka (metin, görsel, müzik gibi yeni içerikler üretir). Bu türler sayesinde YZ; sağlık, eğitim, tarım ve daha birçok alanda aktif şekilde kullanılmaktadır.",
-      "3": "Yapay zeka verilerden örüntüler bularak öğrenir. Bu öğrenme üç şekilde gerçekleşebilir: Denetimli öğrenme (etiketli verilerle), denetimsiz öğrenme (verilerde gizli yapıları keşfetme), pekiştirmeli öğrenme (ödül/ceza ile deneme-yanılma). Bu öğrenme yöntemleri sayesinde yapay zeka sistemleri, zamanla daha doğru ve etkili hale gelir.",
-      "4": "Yapay zekanın güvenliği, sistemlerin öngörülebilir, denetlenebilir ve insan kontrolünde çalışmasına bağlıdır. Kısa vadede hatasızlık, adalet ve veri gizliliği ön plandayken; uzun vadede otonom kararların kontrolü önemlidir. AI uygun şekilde geliştirildiğinde güvenli olabilir; ancak etik standartlara, şeffaflığa ve sürekli denetime ihtiyaç duyar.",
-      "5": "Yapay zeka araçları; veri analizi, görüntü işleme, ses tanıma, doğal dil işleme gibi birçok alanda kullanılır. Başlıca araçlar arasında Makine Öğrenimi platformları, NLP kütüphaneleri, görüntü işleme algoritmaları, robotik yazılımlar ve AI destekli geliştirme ortamları yer alır. Bu araçlar, araştırmadan üretime kadar geniş bir yelpazede çözüm sunar.",
-      "6": "Turing Testi, bir makinenin insan gibi düşünüp düşünemediğini anlamak için yapılan bir testtir. Bir insan değerlendirici, yazılı olarak bir makine ve bir insanla konuşur ve hangisinin insan olduğunu anlamaya çalışır. Eğer ayırt edemezse, makine testi geçmiş olur. Bu test, yapay zekanın insan benzeri davranış üretme kapasitesini ölçmek için önemli bir ölçüttür.",
-      "7": "Yapay zekanın geleceği, insan zekasıyla entegre çalışabilen sistemlerin gelişimi yönünde ilerlemektedir. AI, otomasyondan sağlığa, eğitimden üretime kadar her alanda devrim yaratıyor. Ancak bu gelişimin güvenli, etik ve insan odaklı olması için uluslararası işbirliği, yasal düzenlemeler ve sürekli denetim büyük önem taşımaktadır."
-    }
   }
 }

@@ -1,0 +1,42 @@
+{
+  "MachineAkademisyenler": {
+    "names": {
+      "1": "Doç. Dr. İbrahim KELEŞ",
+      "2": "Doç. Dr. Hasan DEMİRTAŞ",
+      "3": "Dr. Öğr. Üyesi Bahattin KANBER",
+      "4": "Dr. Öğr. Üyesi Abdulvahap ÇAKMAK",
+      "5": "Dr. Öğr. Üyesi İlhan ÇELİK",
+      "6": "Dr. Öğr. Üyesi Lütfu NAMLI",
+      "7": "Dr. Öğr. Üyesi Cagın BOLAT",
+      "8": "Dr. Öğr. Üyesi Halil İbrahim KURT",
+      "9": "Dr. Öğr. Üyesi Murat Eray KORKMAZ",
+      "10": "Dr. Öğr. Üyesi Efeyza ŞÜKÜR",
+      "11": "Dr. Öğr. Üyesi Sare MİTİNCİK",
+      "12": "Dr. Öğr. Üyesi Yasemin KORKMAZ",
+      "13": "Arş. Gör. Abdulkadir ÇEBİ",
+      "14": "Arş. Gör. Batuhan OZAKIN",
+      "15": "Arş. Gör. Bilal SUNGUR",
+      "16": "Arş. Gör. M. Turan ASLAN",
+      "17": "Arş. Gör. M. Yusuf YAZICI"
+    },
+    "img_path": [
+      "/images/akademisyenler/machine/ibrahim.keles.png",
+      "/images/akademisyenler/machine/hasan.demirtas.png",
+      "/images/akademisyenler/machine/bahattin.kanber.png",
+      "/images/akademisyenler/machine/adulvahap.cakmak.png",
+      "/images/akademisyenler/machine/ilhan.celik.png",
+      "/images/akademisyenler/machine/lutfu.namli.png",
+      "/images/akademisyenler/machine/cagin.bolat.png",
+      "/images/akademisyenler/machine/halilibrahim.kurt.png",
+      "/images/akademisyenler/machine/murateray.korkmaz.png",
+      "/images/akademisyenler/machine/efeyza.sukur.png",
+      "/images/akademisyenler/machine/sare.mitincik.png",
+      "/images/akademisyenler/machine/yasemin.korkmaz.png",
+      "/images/akademisyenler/machine/abdulkadir.cebi.png",
+      "/images/akademisyenler/machine/batuhan.ozakin.png",
+      "/images/akademisyenler/machine/bilal.sungur.png",
+      "/images/akademisyenler/machine/mturan.aslan.png",
+      "/images/akademisyenler/machine/myusuf.yazici.png"
+    ]
+  }
+}

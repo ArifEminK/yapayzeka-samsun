@@ -29,21 +29,20 @@ const AIStudiesSection = () => {
             imgUrl="/img/whatsai/geo-ai.png"
           />
         </Link>
-        <Link
-          href={"projects"}
-          className="flex flex-col md:flex-row my-[4vh] gap-[4vh] max-w-[90vw] mx-auto px-[2vh]"
-        >
+        <div className="flex flex-col md:flex-row my-[4vh] gap-[4vh] max-w-[90vw] mx-auto px-[2vh]">
           <QuestionComp
             title={data["Projeler"].Sorular[4]}
             text={data["Projeler"].Cevaplar[4]}
             imgUrl="/img/whatsai/economy-ai.png"
           />
-          <QuestionComp
-            title={data["Projeler"].Sorular[5]}
-            text={data["Projeler"].Cevaplar[5]}
-            imgUrl="/img/whatsai/engineering-ai.png"
-          />
-        </Link>
+          <Link href={"engineering"}>
+            <QuestionComp
+              title={data["Projeler"].Sorular[5]}
+              text={data["Projeler"].Cevaplar[5]}
+              imgUrl="/img/whatsai/engineering-ai.png"
+            />
+          </Link>
+        </div>
       </section>
     </div>
   );

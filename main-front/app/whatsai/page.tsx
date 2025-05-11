@@ -6,7 +6,7 @@ import data from "@/public/yapay_zeka.json";
 import ContentSection from "@/components/ContentSection";
 const page = () => {
   return (
-    <div className=" w-full mx-auto  shadow-lg overflow-hidden">
+    <div className=" w-full mx-auto shadow-lg overflow-hidden">
       <div className="mt-[16vh] w-full h-[84vh] ">
         <video
           autoPlay

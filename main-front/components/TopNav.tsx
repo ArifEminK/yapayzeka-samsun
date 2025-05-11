@@ -57,7 +57,7 @@ const TopNav = () => {
       <div
         className={`w-[100%] px-4 sm:px-6 lg:px-8 ${
           isScrolled ? "mt-[1vw]" : "mt-[3vh]"
-        },${isScrolled ? "h-[5vh] md:h-[12vh]" : "h-[8vh] md:h-[15vh]"}`}
+        },${isScrolled ? "h-[5vh] md:h-[10vh]" : "h-[8vh] md:h-[15vh]"}`}
       >
         <div className="flex h-full justify-between items-center ">
           <div className="flex items-center space-x-4">
@@ -155,17 +155,42 @@ const TopNav = () => {
         </div>
       </div>
       <div
-        className={`w-[80vw] ml-[10vw] h-full items-center flex justify-between text-white ${
-          isScrolled ? "h-[3vh] md:h-[1vh]" : "h-[4vh] md:h-[5vh]"
+        className={`w-[100vw] h-full items-center px-[5vh] bg-[#2A3B53] flex justify-between text-white ${
+          isScrolled ? "h-[3vh] md:h-[5vh]" : "h-[4vh] md:h-[5vh]"
         }`}
       >
-        <TopNavQuests href="whats-ai" questions="Yapay Zeka Nedir?" />
-        <TopNavQuests href="ai-safety" questions="Yapay Zeka Güvenli Mi?" />
-        <TopNavQuests
-          href="ai-using"
-          questions="Yapay Zeka Nasıl Kullanılıyor?"
-        />
-        <TopNavQuests href="ai-history" questions="Yapay Zekanın Tarihçesi" />
+        {pathname == "/engineering" ? (
+          <>
+            <TopNavQuests href="engineering" questions="Yazılım Mühendisliği" />
+            <TopNavQuests href="engineering" questions="Makine Mühendisliği" />
+            <TopNavQuests
+              href="engineering"
+              questions="Elektrik-Elektronik Mühendisliği"
+            />
+            <TopNavQuests
+              href="engineering"
+              questions="Endüstri Mühendisliği"
+            />
+            <TopNavQuests
+              href="engineering"
+              questions="Biyomedikal Mühendisliği"
+            />
+            <TopNavQuests href="engineering" questions="Temel Bilimler" />
+          </>
+        ) : (
+          <>
+            <TopNavQuests href="whats-ai" questions="Yapay Zeka Nedir?" />
+            <TopNavQuests href="ai-safety" questions="Yapay Zeka Güvenli Mi?" />
+            <TopNavQuests
+              href="ai-using"
+              questions="Yapay Zeka Nasıl Kullanılıyor?"
+            />
+            <TopNavQuests
+              href="ai-history"
+              questions="Yapay Zekanın Tarihçesi"
+            />
+          </>
+        )}
       </div>
     </nav>
   );
