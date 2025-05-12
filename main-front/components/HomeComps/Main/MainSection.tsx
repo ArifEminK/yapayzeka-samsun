@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const MainSection = () => {
   return (
-    <div className="mt-[16vh] w-full h-[84vh] ">
+    <div className="md:mt-[16vh] mt-[12vh] w-full md:h-[84vh] h-[88vh] ">
       <video
         autoPlay
         loop

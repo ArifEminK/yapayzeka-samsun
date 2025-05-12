@@ -121,21 +121,21 @@ const WhatsAI = () => {
           />
         </Link>
       </section>
-
-      <TitleLane title="Yapay Zekanın Tarihçesi" bg="bg4" />
-      <Link
-        id="ai-history"
-        href={"/whatsai"}
-        className="flex flex-col md:flex-row my-[4vh] gap-[4vh] max-w-[90vw] mx-auto px-[2vh]"
-      >
-        <div className="w-[30vw]">
-          <QuestionComp
-            title={data["Yapay Zeka Info"].Sorular[18]}
-            text={data["Yapay Zeka Info"].Cevaplar[18]}
-            imgUrl="/img/whatsai/ai-history.png"
-          />
-        </div>
-      </Link>
+      <section id="ai-history" className="w-full h-auto">
+        <TitleLane title="Yapay Zekanın Tarihçesi" bg="bg4" />
+        <Link
+          href={"/whatsai"}
+          className="flex flex-row my-[4vh] gap-[4vh] max-w-[90vw] mx-auto px-[2vh]"
+        >
+          <div className="md:w-[30vw]">
+            <QuestionComp
+              title={data["Yapay Zeka Info"].Sorular[18]}
+              text={data["Yapay Zeka Info"].Cevaplar[18]}
+              imgUrl="/img/whatsai/ai-history.png"
+            />
+          </div>
+        </Link>
+      </section>
     </div>
   );
 };

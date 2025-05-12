@@ -8,7 +8,7 @@ interface TitleLaneProps {
 const TitleLane: React.FC<TitleLaneProps> = ({ title, bg }) => {
   return (
     <div
-      className={`opacity-80 bg-cover bg-fixed bg-center h-[24vh] flex justify-center items-center w-full bg-${bg}`}
+      className={`opacity-80 bg-cover bg-fixed bg-center md:h-[24vh] h-[12vh] flex justify-center items-center w-full bg-${bg}`}
     >
       <h1
         className="text-white font-sans text-[8vw] sm:text-[4.2vw] font-bold z-[2] text-center"

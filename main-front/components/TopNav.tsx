@@ -2,16 +2,15 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import TopNavTitle from "./TopNavTitle";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
-import TopNavQuests from "./TopNavQuests";
 import { usePathname } from "next/navigation";
-import { TypeAnimation } from "react-type-animation";
-import { FaArrowLeft } from "react-icons/fa6";
+import { MdDarkMode, MdLightMode, MdMenu, MdClose } from "react-icons/md";
+import TopNavTitle from "@/components/TopNavTitle";
+import TopNavQuests from "@/components/TopNavQuests";
 
 const TopNav = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -33,13 +32,8 @@ const TopNav = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -47,152 +41,140 @@ const TopNav = () => {
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
+  useEffect(() => {
+    const closeMenuOnScroll = () => {
+      if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+    };
+
+    window.addEventListener("scroll", closeMenuOnScroll);
+    return () => window.removeEventListener("scroll", closeMenuOnScroll);
+  }, [isMobileMenuOpen]);
+
+  const renderQuestions = () => {
+    if (pathname === "/engineering") {
+      return [
+        "Yazılım Mühendisliği",
+        "Makine Mühendisliği",
+        "Elektrik-Elektronik Mühendisliği",
+        "Endüstri Mühendisliği",
+        "Biyomedikal Mühendisliği",
+        "Temel Bilimler",
+      ].map((q, i) => <TopNavQuests key={i} href="engineering" questions={q} />);
+    } else if (pathname === "/whatsai") {
+      return [
+        { href: "means", q: "Ne Anlama Geliyor?" },
+        { href: "types", q: "Türleri Nelerdir?" },
+        { href: "learning", q: "Nasıl Öğrenir?" },
+        { href: "safety", q: "Güvenli Mi?" },
+        { href: "tools", q: "Araçları Nelerdir?" },
+        { href: "turing", q: "Turing Testi Nedir?" },
+        { href: "future", q: "Geleceği ne olacak?" },
+      ].map((item, i) => <TopNavQuests key={i} href={item.href} questions={item.q} />);
+    } else {
+      return [
+        { href: "whats-ai", q: "Yapay Zeka Nedir?" },
+        { href: "ai-safety", q: "Yapay Zeka Güvenli Mi?" },
+        { href: "ai-using", q: "Yapay Zeka Nasıl Kullanılıyor?" },
+        { href: "ai-history", q: "Yapay Zekanın Tarihçesi" },
+      ].map((item, i) => <TopNavQuests key={i} href={item.href} questions={item.q} />);
+    }
+  };
 
   return (
-    <nav
-      className={`bg-defBg items-center shadow-md fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "h-[8vh] md:h-[15vh]" : "h-[12vh] md:h-[20vh]"
-      }`}
-    >
-      <div
-        className={`w-[100%] px-4 sm:px-6 lg:px-8 ${
-          isScrolled ? "mt-[1vw]" : "mt-[3vh]"
-        },${isScrolled ? "h-[5vh] md:h-[10vh]" : "h-[8vh] md:h-[15vh]"}`}
-      >
-        <div className="flex h-full justify-between items-center ">
-          <div className="flex items-center space-x-4">
-            <Link href="/" className="flex items-center  ">
-              {isScrolled! == false ? (
-                <Image
-                  src="/images/logo_beyaz.png"
-                  alt="Logo"
-                  width={60}
-                  height={60}
-                  className={` w-auto opacity-75 ${
-                    isHome == true ? "h-[10vh]" : "h-[8vh]"
-                  }`}
-                />
-              ) : (
-                <div></div>
-              )}
-              {isHome == true ? (
-                <span className="hover:opacity-100 ml-[2vw] sm:text-[2.2rem] font-semibold opacity-70 font-PTSans text-white">
-                  Yapay Zeka
-                </span>
-              ) : (
-                <div className="relative ml-[1vw] opacity-70 hover:opacity-100 border-2 border-borderColor w-[16vw] h-[6vh]">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                  >
-                    <source src="/videos/back-bg.mp4" type="video/mp4" />
-                  </video>
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center pl-[1vw]">
-                    <FaArrowLeft size={"2vw"} className="text-white" />
-                    <TypeAnimation
-                      sequence={["geri dön", 1000, " ", 500]}
-                      wrapper="span"
-                      speed={10}
-                      repeat={Infinity}
-                      className="text-white ml-[0.5vw] sm:text-xl font-code"
-                    />
-                  </div>
-                </div>
-              )}
+    <nav className={`bg-defBg flex flex-row md:flex-col items-center shadow-md fixed w-full z-50 transition-all duration-300 ${isScrolled ? "h-[12vh] md:h-[15vh]" : "h-[12vh] md:h-[20vh]"}`}>
+      <div className={`w-[100%] px-[2vw] ${isScrolled ? "mt-[1vw]" : "mt-[3vh]"},${isScrolled ? "h-[5vh] md:h-[10vh]" : "h-[12vh] md:h-[15vh]"}`}>
+        <div className="flex h-full justify-between items-center">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center gap-[4vw] md:gap-[2vw]">
+              <Image
+                src="/images/logo_beyaz.png"
+                alt="Logo"
+                width={0}
+                height={0}
+                className="w-auto h-[8vh] object-contain"
+                sizes="8vh"
+              />
+              <span className="text-white text-[4vh] md:text-[4.5vh] font-semibold font-PTSans">
+                Yapay Zeka
+              </span>
             </Link>
 
-            {/* Menü md ve üstü */}
-            {isHome == true ? (
-              <div className="hidden md:flex space-x-4">
-                <TopNavTitle title="Akademisyenlerimiz" href="academician" />
-                <TopNavTitle title="Projeler" href="projects" />
+            {isHome && (
+              <div className="hidden md:flex space-x-[2vw] ml-[2vw]">
+                <TopNavTitle title="Alanlarımız" href="projects" />
                 <TopNavTitle title="Haberler" href="news" />
               </div>
-            ) : (
-              <div></div>
             )}
           </div>
 
-          {/* Search sadece md ve üstü göster */}
-          <div className="hidden md:flex relative">
+          <div className="flex items-center gap-[2vw] md:hidden">
             <button
               onClick={toggleTheme}
-              className="text-white hover:text-gray-300 transition-colors duration-300 p-2"
+              className="text-white"
               title="Tema Değiştir"
             >
-              {theme === "light" ? (
-                <MdLightMode size={36} />
-              ) : (
-                <MdDarkMode size={36} className="text-white" />
-              )}
+              {theme === "light" ? <MdLightMode className="text-[4vh]" /> : <MdDarkMode className="text-[4vh]" />}
             </button>
-            <button className="text-white hover:text-gray-300 transition-colors duration-300 p-2">
-              <h1 className="text-2xl">EN</h1>
+            <span className="text-white text-[2.5vh]">EN</span>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white text-[4vh]"
+            >
+              {isMobileMenuOpen ? <MdClose className="text-[4.5vh]" /> : <MdMenu className="text-[4.5vh]" />}
             </button>
           </div>
 
-          {/* Hamburger sadece mobil */}
-          <div className="md:hidden flex items-center">
-            <button className="p-2 text-gray-700 hover:text-[#0D7B81]">
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+          <div className="hidden md:flex items-center space-x-[1.5vw] ml-auto">
+            <button
+              onClick={toggleTheme}
+              className="text-white p-[0.5vh]"
+              title="Tema Değiştir"
+            >
+              {theme === "light" ? <MdLightMode size={36} /> : <MdDarkMode size={36} className="text-white" />}
             </button>
+            <span className="text-white text-[2.5vh]">EN</span>
           </div>
         </div>
       </div>
+
       <div
-        className={`w-[100vw] h-full items-center px-[5vh] bg-[#2A3B53] flex justify-between text-white ${
-          isScrolled ? "h-[3vh] md:h-[5vh]" : "h-[4vh] md:h-[5vh]"
-        }`}
+        className={`hidden md:flex w-[100vw] h-full items-center px-[5vh] bg-[#2A3B53] justify-between text-white ${isScrolled ? "h-[3vh] md:h-[5vh]" : "h-[4vh] md:h-[5vh]"}`}
       >
-        {pathname == "/engineering" ? (
-          <>
-            <TopNavQuests href="engineering" questions="Yazılım Mühendisliği" />
-            <TopNavQuests href="engineering" questions="Makine Mühendisliği" />
-            <TopNavQuests
-              href="engineering"
-              questions="Elektrik-Elektronik Mühendisliği"
-            />
-            <TopNavQuests
-              href="engineering"
-              questions="Endüstri Mühendisliği"
-            />
-            <TopNavQuests
-              href="engineering"
-              questions="Biyomedikal Mühendisliği"
-            />
-            <TopNavQuests href="engineering" questions="Temel Bilimler" />
-          </>
-        ) : (
-          <>
-            <TopNavQuests href="whats-ai" questions="Yapay Zeka Nedir?" />
-            <TopNavQuests href="ai-safety" questions="Yapay Zeka Güvenli Mi?" />
-            <TopNavQuests
-              href="ai-using"
-              questions="Yapay Zeka Nasıl Kullanılıyor?"
-            />
-            <TopNavQuests
-              href="ai-history"
-              questions="Yapay Zekanın Tarihçesi"
-            />
-          </>
-        )}
+        {renderQuestions()}
       </div>
+
+      {isMobileMenuOpen && (
+        <div
+          className="absolute top-[12vh] left-0 w-full bg-[#2A3B53] text-white px-[4vw] py-[3vh] flex flex-col space-y-[2vh] z-50 transition-transform duration-300 ease-in-out"
+        >
+          {isHome && (
+            <>
+              <Link href="#projects" onClick={() => setIsMobileMenuOpen(false)}>
+                <TopNavTitle title="Alanlarımız" href="projects" />
+              </Link>
+              <Link href="#news" onClick={() => setIsMobileMenuOpen(false)}>
+                <TopNavTitle title="Haberler" href="news" />
+              </Link>
+            </>
+          )}
+          <Link href="#whats-ai" onClick={() => setIsMobileMenuOpen(false)}>
+            <TopNavQuests questions="Yapay Zeka Nedir?" href="whats-ai" />
+          </Link>
+          <Link href="#ai-safety" onClick={() => setIsMobileMenuOpen(false)}>
+            <TopNavQuests questions="Yapay Zeka Güvenli Mi?" href="ai-safety" />
+          </Link>
+          <Link href="#ai-using" onClick={() => setIsMobileMenuOpen(false)}>
+            <TopNavQuests questions="Yapay Zeka Nasıl Kullanılıyor?" href="ai-using" />
+          </Link>
+          <Link href="#ai-history" onClick={() => setIsMobileMenuOpen(false)}>
+            <TopNavQuests questions="Yapay Zekanın Tarihçesi" href="ai-history" />
+          </Link>
+        </div>
+      )}
     </nav>
+
+
+
   );
 };
 

@@ -20,7 +20,7 @@ const TopNavTitle: React.FC<TopNavTitleProps> = ({ title, href }) => {
   return (
     <button
       onClick={() => scrollToSection(href)}
-      className="text-white dark:opacity-70 border-l-2 border-borderColor hover:opacity-100 font-PTSans px-3 py-2 text-2xl font-semibold"
+      className="text-white dark:opacity-70 hover:opacity-100 font-PTSans px-3 py-2 text-[4vh] md:text-[3.5vh] font-semibold"
     >
       {title}
     </button>

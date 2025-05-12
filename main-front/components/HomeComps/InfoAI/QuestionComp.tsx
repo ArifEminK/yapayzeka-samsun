@@ -44,7 +44,7 @@ const QuestionComp: React.FC<QuestionCompProps> = ({
         ) : null}
         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
         {linkDiv ? (
-          <div className="absolute top-[1vh] right-[1vh] h-[5vh] opacity-75 w-[4.5vh] group-hover:w-[7vw] flex flex-row items-center  bg-topNavBg rounded-xl z-20 transition-all duration-300 ease-in-out ">
+          <div className="absolute top-[1vh] right-[1vh] h-[5vh] opacity-75 md:w-[4.5vh] w-0 group-hover:w-[7vw] flex flex-row items-center  bg-topNavBg rounded-xl z-20 transition-all duration-300 ease-in-out ">
             <button className="p-[0.35vw]">
               <FaLink size={"1.5vw"} className="text-textColor" />
             </button>

@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import TitleLane from "@/components/TitleLane";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
@@ -7,7 +7,7 @@ import ContentSection from "@/components/ContentSection";
 const page = () => {
   return (
     <div className=" w-full mx-auto shadow-lg overflow-hidden">
-      <div className="mt-[16vh] w-full h-[84vh] ">
+      <div className="md:mt-[16vh] mt-[12vh] w-full md:h-[84vh] h-[88vh]">
         <video
           autoPlay
           loop
@@ -26,13 +26,19 @@ const page = () => {
             <div className="h-2 mt-[2vh]"></div>
             <TypeAnimation
               sequence={[
-                "Nedir?",
+                "Ne Anlama Geliyor?",
+                1000,
+                "Türleri Nelerdir?",
+                1000,
+                "Nasıl Öğrenir?",
                 1000,
                 "Güvenli Mi?",
                 1000,
-                "Nasıl Kullanılıyor?",
+                "Araçları Nelerdir?",
                 1000,
-                "Tarihçesi",
+                "Turing Testi Nedir?",
+                1000,
+                "Geleceği ne olacak?",
                 1000,
               ]}
               wrapper="span"
@@ -43,66 +49,66 @@ const page = () => {
           </h1>
         </div>
       </div>
-      <section className="mt-[4vh]">
+      <section id="means" className="mt-[4vh]">
         <TitleLane title={data["Content"].Sorular[1]} bg="bg1" />
         <ContentSection
           title={data["Content"].Sorular[1]}
           text={data["Content"].Cevaplar[1]}
-          bgUrl="bg5"
+          bgUrl="whatsair1"
           directionLeft={false}
         />
       </section>
-      <section className="mt-[4vh]">
+      <section id="types" className="mt-[4vh]">
         <TitleLane title={data["Content"].Sorular[2]} bg="bg2" />
         <ContentSection
           title={data["Content"].Sorular[2]}
           text={data["Content"].Cevaplar[2]}
-          bgUrl="bg5"
+          bgUrl="whatsail1"
           directionLeft={true}
         />
       </section>
-      <section className="mt-[4vh]">
+      <section id="learning" className="mt-[4vh]">
         <TitleLane title={data["Content"].Sorular[3]} bg="bg3" />
         <ContentSection
           title={data["Content"].Sorular[3]}
           text={data["Content"].Cevaplar[3]}
-          bgUrl="bg5"
+          bgUrl="whatsair2"
           directionLeft={false}
         />
       </section>
-      <section className="mt-[4vh]">
+      <section id="safety" className="mt-[4vh]">
         <TitleLane title={data["Content"].Sorular[4]} bg="bg4" />
         <ContentSection
           title={data["Content"].Sorular[4]}
           text={data["Content"].Cevaplar[4]}
-          bgUrl="bg5"
+          bgUrl="whatsail2"
           directionLeft={true}
         />
       </section>
-      <section className="mt-[4vh]">
+      <section id="tools" className="mt-[4vh]">
         <TitleLane title={data["Content"].Sorular[5]} bg="bg1" />
         <ContentSection
           title={data["Content"].Sorular[5]}
           text={data["Content"].Cevaplar[5]}
-          bgUrl="bg5"
+          bgUrl="whatsair3"
           directionLeft={false}
         />
       </section>
-      <section className="mt-[4vh]">
+      <section id="turing" className="mt-[4vh]">
         <TitleLane title={data["Content"].Sorular[6]} bg="bg3" />
         <ContentSection
           title={data["Content"].Sorular[6]}
           text={data["Content"].Cevaplar[6]}
-          bgUrl="bg5"
+          bgUrl="whatsail3"
           directionLeft={true}
         />
       </section>
-      <section className="mt-[4vh]">
+      <section id="future" className="mt-[4vh]">
         <TitleLane title={data["Content"].Sorular[7]} bg="bg1" />
         <ContentSection
           title={data["Content"].Sorular[7]}
           text={data["Content"].Cevaplar[7]}
-          bgUrl="bg5"
+          bgUrl="whatsair4"
           directionLeft={false}
         />
       </section>

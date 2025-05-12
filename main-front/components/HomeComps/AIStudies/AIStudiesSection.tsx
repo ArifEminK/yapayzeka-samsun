@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const AIStudiesSection = () => {
   return (
-    <div className="ai-section relative mt-[4vh] flex flex-col items-center justify-center transition-all duration-300 ease-in-out">
-      <section id="projects" className="w-full h-auto">
+    <div id="projects" className="ai-section relative mt-[4vh] flex flex-col items-center justify-center transition-all duration-300 ease-in-out">
+      <section className="w-full h-auto">
         <TitleLane bg="bg1" title="Yapay Zeka Çalışmalarımız" />
         <Link
           href={"projects"}
