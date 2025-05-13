@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { MdDarkMode, MdLightMode, MdMenu, MdClose } from "react-icons/md";
 import TopNavTitle from "@/components/TopNavTitle";
 import TopNavQuests from "@/components/TopNavQuests";
+import { TypeAnimation } from "react-type-animation";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const TopNav = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -86,17 +88,33 @@ const TopNav = () => {
         <div className="flex h-full justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-[4vw] md:gap-[2vw]">
-              <Image
-                src="/images/logo_beyaz.png"
-                alt="Logo"
-                width={0}
-                height={0}
-                className="w-auto h-[8vh] object-contain"
-                sizes="8vh"
-              />
-              <span className="text-white text-[4vh] md:text-[4.5vh] font-semibold font-PTSans">
-                Yapay Zeka
-              </span>
+            {isHome == true ? (
+                <span className="hover:opacity-100 ml-[2vw] sm:text-[2.2rem] font-semibold opacity-70 font-PTSans text-white">
+                  Yapay Zeka
+                </span>
+              ) : (
+                <div className="relative ml-[1vw] opacity-70 hover:opacity-100 border-2 border-borderColor w-[16vw] h-[6vh]">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/videos/back-bg.mp4" type="video/mp4" />
+                  </video>
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center pl-[1vw]">
+                    <FaArrowLeft size={"2vw"} className="text-white" />
+                    <TypeAnimation
+                      sequence={["geri dön", 1000, " ", 500]}
+                      wrapper="span"
+                      speed={10}
+                      repeat={Infinity}
+                      className="text-white ml-[0.5vw] sm:text-l font-code"
+                    />
+                  </div>
+                </div>
+              )}
             </Link>
 
             {isHome && (
