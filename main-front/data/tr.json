@@ -1,0 +1,134 @@
+{
+  "HomePage": {
+    "title": "Merhaba dünya!"
+  },
+  "TopNavQuestions": {
+    "engineering": [
+      { "href": "software", "q": "Yazılım Mühendisliği" },
+      { "href": "machine", "q": "Makine Mühendisliği" },
+      { "href": "electrical", "q": "Elektrik-Elektronik Mühendisliği" },
+      { "href": "industry", "q": "Endüstri Mühendisliği" },
+      { "href": "biomedical", "q": "Biyomedikal Mühendisliği" },
+      { "href": "basic", "q": "Temel Bilimler" }
+    ],
+    "whatsai": [
+      { "href": "means", "q": "Ne Anlama Geliyor?" },
+      { "href": "types", "q": "Türleri Nelerdir?" },
+      { "href": "learning", "q": "Nasıl Öğrenir?" },
+      { "href": "safety", "q": "Güvenli Mi?" },
+      { "href": "tools", "q": "Araçları Nelerdir?" },
+      { "href": "turing", "q": "Turing Testi Nedir?" },
+      { "href": "future", "q": "Geleceği ne olacak?" }
+    ],
+    "default": [
+      { "href": "whats-ai", "q": "Yapay Zeka Nedir?" },
+      { "href": "ai-safety", "q": "Yapay Zeka Güvenli Mi?" },
+      { "href": "ai-using", "q": "Yapay Zeka Nasıl Kullanılıyor?" },
+      { "href": "ai-history", "q": "Yapay Zekanın Tarihçesi" }
+    ]
+  },
+  "TopNavTitles": {
+    "title1": "Yapay Zeka",
+    "title2": "Bölümlerimiz",
+    "title3": "Haberler"
+  },
+  "MainSection": {
+    "title1": "Nedir?",
+    "title2": "Ne Yapar?",
+    "title3": "Üzerine Çalışmalarımız"
+  },
+  "WhatsAI": {
+    "Titles": {
+      "1": "Yapay Zeka Nedir?",
+      "2": "Yapay Zeka Güvenli Mi?",
+      "3": "Yapay Zeka Nasıl Kullanılıyor?",
+      "4": "Yapay Zekanın Tarihçesi"
+    },
+    "Questions": {
+      "1": "Yapay Zeka Ne Anlama Geliyor?",
+      "2": "Yapay Zekanın Türleri Nelerdir?",
+      "3": "Yapay Zeka Nasıl Öğrenir?",
+      "4": "Yapay Zeka Güvenli Mi?",
+      "5": "Yapay Zeka Araçları",
+      "6": "Turing Testi Nedir?",
+      "7": "Yapay zekanın geleceği ne olacak?",
+      "8": "Demokratik Haklar?",
+      "9": "Yönetim?",
+      "10": "Küresel Sağlık?",
+      "11": "Çevre",
+      "12": "Toplum",
+      "13": "Küresel sağlık, tıp ve hastalıklar ",
+      "14": "İnsan toplumu, kültür ve yaratıcılık",
+      "15": "Doğa, iklim ve evren",
+      "16": "Siyaset, iş dünyası ve ekonomi",
+      "17": "Teknoloji ve Gelecek",
+      "18": "Yapay zekanın nereden geldiğini hiç merak ettiniz mi ?"
+    },
+    "Answers": {
+      "1": "AI, yani yapay zeka… Hepimiz bu terimi bir şekilde duymuşuzdur. Peki, yapay zeka gerçekten neyi ifade ediyor? Sadece geçici bir teknoloji trendi mi, yoksa geleceğimizi şekillendiren kalıcı bir dönüşüm mü?",
+      "2": "Yapay zekayla birlikte sıkça duyduğumuz makine öğrenmesi, derin öğrenme ve üretken yapay zeka gibi kavramlar aslında ne anlama geliyor? Aralarındaki farklar neler?",
+      "3": "Bir yapay zekanın 'öğrenmesi' tam olarak ne anlama gelir? Bilgisayarlar gerçekten öğrenebilir mi?",
+      "4": "Yapay zekanın güvenliği, sistemlerin öngörülebilir, denetlenebilir ve insan kontrolü altında çalışıp çalışmadığına bağlıdır. Kısa vadede güvenlik; algoritmaların hatasız, adil ve veri gizliliğine uygun çalışmasını içerir. Örneğin, önyargılı veriyle eğitilmiş bir model, hatalı veya ayrımcı sonuçlar üretebilir. Uzun vadede ise yapay zekanın otonom karar alma yeteneği, kontrol ve denetim mekanizmalarının önemini artırır. Bu nedenle, AI safety (yapay zeka güvenliği) araştırmaları; sistemlerin güvenilirliğini, açıklanabilirliğini ve insan merkezli tasarımını önceliklendirir. Yapay zeka, uygun şekilde geliştirildiğinde güvenli olabilir; ancak bu süreçte, sürekli denetim, şeffaflık ve etik standartların uygulanması önemlidir.",
+      "5": "Yapay zeka (AI) araçları, günümüzde araştırmadan endüstriyel uygulamalara kadar geniş bir alanda dönüştürücü bir rol oynamaktadır. Bu araçlar, veri analizinden otomasyona, doğal dil işlemeden görüntü tanımaya kadar çeşitli görevleri gerçekleştirebilir. Başlıca yapay zeka araçları şunlardır:",
+      "6": "Bir yapay zeka ile insanı sadece yazışarak ayırt edebilir misin? Turing Testi, makinelerin gerçekten zeki olup olmadığını sorgulayan en ikonik sınavlardan biridir.",
+      "7": "Robotlar mı dünyayı ele geçirecek yoksa bir yapay zeka mı işimi elimden alacak? Cevap karmaşıktır.",
+      "8": "Yapay zeka demokratik haklarımızı nasıl etkiliyor ve bu teknoloji seçimleri etkilemek için kullanılabilir mi?",
+      "9": "Yapay zekayı yönetemezsek ne olur ve yapay zeka için iyi yönetim nasıl olmalıdır?",
+      "10": "Yapay zeka, özellikle sağlık alanında iyi bir güç olabilir. Peki kullanımındaki potansiyel tuzaklar nelerdir?",
+      "11": "Yapay zeka çevreyi nasıl etkiliyor ve olumsuz etkileri olumlu kullanım olasılıklarından daha mı ağır basıyor?",
+      "12": "Yapay zekanın toplum üzerindeki etkileri nelerdir ve kontrol edilmediği ve yönetilmediği takdirde ne olur? ",
+      "13": "Yapay zekanın psikiyatrik bozukluklarıteşhis etmek ve pandemilerin yayılmasını tahmin etmek için nasıl kullanıldığını keşfedin.",
+      "14": "Dünya genelinde uzmanların yapay zeka etiğini nasıl sorguladığını ve yapay zekayı senfoniler yaratmak ve sergiler düzenlemek için nasıl kullandığını görün.",
+      "15": "Araştırmacıların balina dilini çözmek ve Mars'ta yaşam aramak için yapay zekayı nasıl kullandıklarını öğrenin.",
+      "16": "Dünyadaki uzmanların yapay zekanın ekonomi, iş dünyası ve siyaset dünyası üzerindeki etkisini nasıl araştırdığını görün.",
+      "17": "Dünyadaki araştırmacılarının sürücüsüz araçlardan temiz enerjiye ve ekosistem izleme çalışmalarına kadar geleceği nasıl şekillendirdiğini görün.",
+      "18": "Yapay zekanın 1950'lerdeki başlangıcından günümüze kadar uzanan tarihsel zaman çizelgesini, uygulamaları ve küresel yapay zeka zirvelerini keşfedin."
+    }
+  },
+  "AIStudies": {
+    "Title": "Yapay Zeka Üzerine Çalışmalarımız",
+    "Questions": {
+      "1": "Tıp Alanında Yapay Zeka",
+      "2": "Uçak ve Uzay Üzerine AI Projeleri",
+      "3": "Coğrafya ve Felsefede Yapay Zeka",
+      "4": "Ekonomi ve Finans Sektöründe Yapay Zeka",
+      "5": "Mühendislikte Yapay Zeka"
+    },
+    "Answers": {
+      "1": "Tıpta yapay zeka, hastalık teşhisi, medikal görüntü işleme (röntgen, MR, tomografi), kişiselleştirilmiş tedavi planlama, ilaç keşfi ve hasta takibi gibi birçok alanda aktif şekilde kullanılmaktadır. AI destekli doktor asistanları ve erken teşhis sistemleri, sağlık sektörünü dönüştürmektedir.",
+      "2": "Yapay zeka, hava trafiği optimizasyonu, otonom drone sistemleri, uydu görüntüsü analizleri, uzay aracı navigasyonu ve arıza tahminleme gibi havacılık ve uzay teknolojilerinde geniş bir kullanım alanına sahiptir.",
+      "3": "Coğrafyada yapay zeka, iklim modellemesi, afet tahmini, arazi sınıflandırması ve harita üretiminde kullanılırken; felsefede AI, bilinç, etik, karar verme gibi soyut kavramlar üzerine simülasyonlar ve algoritmalar geliştirilmesine olanak sağlamaktadır.",
+      "4": "Finansal piyasalarda yapay zeka; algoritmik trade, kredi skorlama, dolandırıcılık tespiti, müşteri davranış tahmini ve otomatik portföy yönetimi gibi birçok alanda devrim yaratmıştır. Büyük veriden elde edilen içgörülerle yatırım stratejileri geliştirilmektedir.",
+      "5": "Mühendislikte yapay zeka; akıllı üretim sistemleri, arıza tahminleme, robotik otomasyon, yapısal analiz ve endüstri 4.0 gibi birçok uygulamada yer almaktadır. AI destekli CAD sistemleri ve dijital ikiz teknolojileriyle mühendislik süreçleri daha verimli hale getirilmektedir."
+    }
+  },
+  "Content": {
+    "Title": {
+      "1": "Ne Anlama Geliyor?",
+      "2": "Türleri Nelerdir?",
+      "3": "Nasıl Öğrenir?",
+      "4": "Güvenli Mi?",
+      "5": "Araçları Nelerdir?",
+      "6": "Turing Testi Nedir?",
+      "7": "Geleceği Ne Olacak?"
+    },
+    "Questions": {
+      "1": "Yapay Zeka Ne Anlama Geliyor?",
+      "2": "Yapay Zekanın Türleri Nelerdir?",
+      "3": "Yapay Zeka Nasıl Öğrenir?",
+      "4": "Yapay Zeka Güvenli Mi?",
+      "5": "Yapay Zeka Araçları",
+      "6": "Turing Testi Nedir?",
+      "7": "Yapay zekanın geleceği ne olacak?"
+    },
+    "Answers": {
+      "1": "Yapay zeka, en basit tanımıyla makinelerin insan benzeri kararlar alabilmesini sağlayan bir teknolojidir. Ancak bu, basit bir 'if-then' (eğer-ise) mantığından çok daha ötesine uzanır. Modern AI sistemleri: öğrenebilir (Makine Öğrenimi), mantık yürütebilir (NLP ve planlama algoritmaları), görebilir (Bilgisayarlı Görü) ve hatta yaratıcılık gösterebilir (Generative AI). AI artık bir lüks değil, bir gereklilik. Sağlıkta erken teşhis, finansta dolandırıcılık tespiti, üretimde akıllı otomasyon gibi alanlarda çığır açıyor. Ancak henüz insan sezgisine ve duygusal zekaya tam olarak ulaşamasa da, stratejik bir iş birliği aracı olarak görülmelidir.",
+      "2": "Yapay zeka kendi içinde farklı türlere ayrılır. Bunlar arasında en yaygın olanları: 1. Makine Öğrenmesi (verilerden öğrenerek tahmin yapar), 2. Derin Öğrenme (sinir ağları ile daha karmaşık örüntüler öğrenir), 3. Üretken Yapay Zeka (metin, görsel, müzik gibi yeni içerikler üretir). Bu türler sayesinde YZ; sağlık, eğitim, tarım ve daha birçok alanda aktif şekilde kullanılmaktadır.",
+      "3": "Yapay zeka verilerden örüntüler bularak öğrenir. Bu öğrenme üç şekilde gerçekleşebilir: Denetimli öğrenme (etiketli verilerle), denetimsiz öğrenme (verilerde gizli yapıları keşfetme), pekiştirmeli öğrenme (ödül/ceza ile deneme-yanılma). Bu öğrenme yöntemleri sayesinde yapay zeka sistemleri, zamanla daha doğru ve etkili hale gelir.",
+      "4": "Yapay zekanın güvenliği, sistemlerin öngörülebilir, denetlenebilir ve insan kontrolünde çalışmasına bağlıdır. Kısa vadede hatasızlık, adalet ve veri gizliliği ön plandayken; uzun vadede otonom kararların kontrolü önemlidir. AI uygun şekilde geliştirildiğinde güvenli olabilir; ancak etik standartlara, şeffaflığa ve sürekli denetime ihtiyaç duyar.",
+      "5": "Yapay zeka araçları; veri analizi, görüntü işleme, ses tanıma, doğal dil işleme gibi birçok alanda kullanılır. Başlıca araçlar arasında Makine Öğrenimi platformları, NLP kütüphaneleri, görüntü işleme algoritmaları, robotik yazılımlar ve AI destekli geliştirme ortamları yer alır. Bu araçlar, araştırmadan üretime kadar geniş bir yelpazede çözüm sunar.",
+      "6": "Turing Testi, bir makinenin insan gibi düşünüp düşünemediğini anlamak için yapılan bir testtir. Bir insan değerlendirici, yazılı olarak bir makine ve bir insanla konuşur ve hangisinin insan olduğunu anlamaya çalışır. Eğer ayırt edemezse, makine testi geçmiş olur. Bu test, yapay zekanın insan benzeri davranış üretme kapasitesini ölçmek için önemli bir ölçüttür.",
+      "7": "Yapay zekanın geleceği, insan zekasıyla entegre çalışabilen sistemlerin gelişimi yönünde ilerlemektedir. AI, otomasyondan sağlığa, eğitimden üretime kadar her alanda devrim yaratıyor. Ancak bu gelişimin güvenli, etik ve insan odaklı olması için uluslararası işbirliği, yasal düzenlemeler ve sürekli denetim büyük önem taşımaktadır."
+    }
+  }
+}

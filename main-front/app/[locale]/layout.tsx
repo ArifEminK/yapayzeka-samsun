@@ -1,0 +1,40 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import TopNav from "@/app/components/TopNav";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Yapay Zeka Samsun",
+  description: "Samsun'un yapay zeka ve teknoloji merkezi",
+};
+
+export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }>; }) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+  return (
+    <html lang={locale}>
+      <body className={inter.className}>
+        <NextIntlClientProvider>
+          <div className="w-full bg-homeContBg mx-auto">
+            <TopNav locale={locale} />
+            {children}
+          </div>
+        </NextIntlClientProvider>
+        <footer className="bg-topNavBg text-textColor py-8">
+          <div className="container mx-auto px-4 text-center">
+            <p className="font-opensans">
+              &copy; {new Date().getFullYear()} {locale === "tr" ? "Yapay Zeka Samsun. Tüm hakları saklıdır." : "AI Samsun. All rights reserved."}
+            </p>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}

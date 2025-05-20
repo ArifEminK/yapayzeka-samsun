@@ -1,0 +1,134 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "TopNavQuestions": {
+    "engineering": [
+      { "href": "software", "q": "Software Engineering" },
+      { "href": "machine", "q": "Mechanical Engineering" },
+      { "href": "electrical", "q": "Electrical-Electronics Engineering" },
+      { "href": "industry", "q": "Industrial Engineering" },
+      { "href": "biomedical", "q": "Biomedical Engineering" },
+      { "href": "basic", "q": "Basic Sciences" }
+    ],
+    "whatsai": [
+      { "href": "means", "q": "What Does It Mean?" },
+      { "href": "types", "q": "What Are Its Types?" },
+      { "href": "learning", "q": "How Does It Learn?" },
+      { "href": "safety", "q": "Is It Safe?" },
+      { "href": "tools", "q": "What Are Its Tools?" },
+      { "href": "turing", "q": "What Is the Turing Test?" },
+      { "href": "future", "q": "What About Its Future?" }
+    ],
+    "default": [
+      { "href": "whats-ai", "q": "What is Artificial Intelligence?" },
+      { "href": "ai-safety", "q": "Is AI Safe?" },
+      { "href": "ai-using", "q": "How Is AI Used?" },
+      { "href": "ai-history", "q": "History of AI" }
+    ]
+  },
+  "TopNavTitles": {
+    "title1": "AI",
+    "title2": "Sections",
+    "title3": "News"
+  },
+  "MainSection": {
+    "title1": "What is AI?",
+    "title2": "What does AI do?",
+    "title3": "Our Studies on AI"
+  },
+  "WhatsAI": {
+    "Titles": {
+      "1": "What is AI?",
+      "2": "AI is Safe?",
+      "3": "How is AI used?",
+      "4": "History of AI"
+    },
+    "Questions": {
+      "1": "What does Artificial Intelligence mean?",
+      "2": "What are the types of Artificial Intelligence?",
+      "3": "How does Artificial Intelligence learn?",
+      "4": "Is Artificial Intelligence safe?",
+      "5": "AI Tools",
+      "6": "What is the Turing Test?",
+      "7": "What will be the future of AI?",
+      "8": "Democratic Rights?",
+      "9": "Governance?",
+      "10": "Global Health?",
+      "11": "Environment",
+      "12": "Society",
+      "13": "Global health, medicine and diseases",
+      "14": "Human society, culture and creativity",
+      "15": "Nature, climate and the universe",
+      "16": "Politics, business and economy",
+      "17": "Technology and the Future",
+      "18": "Have you ever wondered where artificial intelligence comes from?"
+    },
+    "Answers": {
+      "1": "AI, or artificial intelligence... We've all heard this term in some way. But what does artificial intelligence really mean? Is it just a temporary tech trend, or a lasting transformation shaping our future?",
+      "2": "Concepts like machine learning, deep learning, and generative AI are often mentioned with artificial intelligence. What do they actually mean? What are the differences between them?",
+      "3": "What does it really mean for an AI to 'learn'? Can computers actually learn?",
+      "4": "The safety of artificial intelligence depends on whether systems work predictably, controllably, and under human supervision. In the short term, safety means algorithms operate without errors, fairly, and in line with data privacy. For example, a model trained with biased data can produce faulty or discriminatory results. In the long term, the autonomous decision-making ability of AI increases the importance of control and supervision mechanisms. Therefore, AI safety research prioritizes reliability, explainability, and human-centered design of systems. When developed appropriately, AI can be safe; however, continuous supervision, transparency, and ethical standards must be implemented throughout the process.",
+      "5": "Artificial intelligence (AI) tools play a transformative role in a wide range of fields today, from research to industrial applications. These tools can perform various tasks, from data analysis to automation, from natural language processing to image recognition. The main AI tools are:",
+      "6": "Can you distinguish a human from an AI just by chatting? The Turing Test is one of the most iconic exams questioning whether machines are truly intelligent.",
+      "7": "Will robots take over the world, or will an AI take my job? The answer is complicated.",
+      "8": "How does AI affect our democratic rights and can this technology be used to influence elections?",
+      "9": "What happens if we can't govern artificial intelligence, and what is good governance for AI?",
+      "10": "AI can be a force for good, especially in healthcare. But what are the potential pitfalls in its use?",
+      "11": "How does AI affect the environment, and do its negative impacts outweigh the positive usage possibilities?",
+      "12": "What are the effects of AI on society, and what happens if it's not controlled and managed?",
+      "13": "Discover how AI is used to diagnose psychiatric disorders and predict the spread of pandemics.",
+      "14": "See how experts worldwide question AI ethics and use AI to create symphonies and organize exhibitions.",
+      "15": "Learn how researchers use AI to decode whale language and search for life on Mars.",
+      "16": "See how global experts investigate the effects of AI on the economy, business, and the political world.",
+      "17": "See how researchers around the world are shaping the future, from driverless vehicles to clean energy and ecosystem monitoring.",
+      "18": "Discover the historical timeline of AI from its beginnings in the 1950s to today, its applications, and global AI summits."
+    }
+  },
+  "AIStudies": {
+    "Title": "Our Studies on AI",
+    "Questions": {
+      "1": "AI in Medicine",
+      "2": "AI Projects in Aviation and Space",
+      "3": "AI in Geography and Philosophy",
+      "4": "AI in the Economy and Finance Sector",
+      "5": "AI in Engineering"
+    },
+    "Answers": {
+      "1": "AI is used in medicine for diagnosis, imaging, drug discovery, and patient monitoring. AI assistants and early diagnosis systems are transforming healthcare.",
+      "2": "AI helps optimize air traffic, control drones, analyze satellite images, and predict faults in aviation and space technologies.",
+      "3": "AI models climate, predicts disasters, and creates maps in geography; in philosophy, it simulates concepts like consciousness and ethics.",
+      "4": "AI revolutionizes finance with algorithmic trading, credit scoring, fraud detection, customer prediction, and portfolio management.",
+      "5": "AI increases efficiency in engineering through smart manufacturing, fault prediction, automation, and digital twin technologies."
+    }
+  },
+  "Content": {
+    "Title": {
+      "1": "What Does It Mean?",
+      "2": "What Are Its Types?",
+      "3": "How Does It Learn?",
+      "4": "Is It Safe?",
+      "5": "What Are Its Tools?",
+      "6": "What Is the Turing Test?",
+      "7": "What Will Its Future Be"
+    },
+    "Questions": {
+      "1": "What Does Artificial Intelligence Mean?",
+      "2": "What Are the Types of Artificial Intelligence?",
+      "3": "How Does Artificial Intelligence Learn?",
+      "4": "Is Artificial Intelligence Safe?",
+      "5": "Artificial Intelligence Tools",
+      "6": "What Is the Turing Test?",
+      "7": "What Is the Future of Artificial Intelligence?"
+    },
+    "Answers": {
+      "1": "Artificial intelligence, in its simplest form, is the technology that enables machines to make human-like decisions. However, it's far beyond a simple 'if-then' logic. Modern AI systems can learn (Machine Learning), reason (through NLP and planning algorithms), see (Computer Vision), and even demonstrate creativity (Generative AI). AI is no longer a luxury but a necessity. It is revolutionizing areas such as early diagnosis in healthcare, fraud detection in finance, and smart automation in manufacturing. Although it has not yet fully reached human intuition and emotional intelligence, it should be seen as a strategic collaboration tool.",
+      "2": "Artificial intelligence is divided into different types. The most common among them are: 1. Machine Learning (learns from data to make predictions), 2. Deep Learning (learns more complex patterns through neural networks), 3. Generative AI (produces new content like text, images, or music). Thanks to these types, AI is actively used in fields such as healthcare, education, agriculture, and more.",
+      "3": "Artificial intelligence learns by detecting patterns in data. This learning occurs in three ways: Supervised learning (with labeled data), unsupervised learning (discovering hidden structures in data), and reinforcement learning (trial-and-error with reward/punishment). These methods help AI systems become more accurate and effective over time.",
+      "4": "The safety of artificial intelligence depends on systems being predictable, controllable, and under human supervision. In the short term, accuracy, fairness, and data privacy are crucial; in the long term, the control of autonomous decisions becomes critical. If developed appropriately, AI can be safe; however, it requires ethical standards, transparency, and continuous oversight.",
+      "5": "AI tools are used in many fields such as data analysis, image processing, voice recognition, and natural language processing. Key tools include machine learning platforms, NLP libraries, image processing algorithms, robotic software, and AI-powered development environments. These tools offer solutions across a wide range from research to production.",
+      "6": "The Turing Test is a test used to determine whether a machine can think like a human. A human evaluator communicates in writing with both a machine and a human, trying to determine which one is human. If the evaluator can't tell the difference, the machine passes the test. This test is a significant criterion to evaluate an AI's capacity to produce human-like behavior.",
+      "7": "The future of artificial intelligence lies in the development of systems that can integrate with human intelligence. AI is revolutionizing every field from automation to healthcare, education to manufacturing. However, for this advancement to be safe, ethical, and human-centered, international cooperation, legal regulations, and continuous oversight are of great importance."
+    }
+  }
+}
