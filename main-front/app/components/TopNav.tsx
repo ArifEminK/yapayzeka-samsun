@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { MdClose, MdDarkMode, MdLightMode, MdMenu } from "react-icons/md";
 import TopNavTitle from "@/app/components/TopNavTitle";
 import TopNavQuests from "@/app/components/TopNavQuests";
 import { TypeAnimation } from "react-type-animation";
-import { IoIosArrowBack } from "react-icons/io"; 
+import { IoIosArrowBack } from "react-icons/io";
 import { useTranslations } from "next-intl";
 
 
@@ -179,6 +179,28 @@ function TopNav({ locale }: { locale: string }) {
                 <TopNavTitle title={b('title3')} href="news" />
               </div>
             )}
+          </div>
+          <div className="flex items-center gap-[2vw] md:hidden">
+            <button
+              onClick={toggleTheme}
+              className="text-white"
+              title="Tema Değiştir"
+            >
+              {theme === "light" ? <MdLightMode className="text-[4vh]" /> : <MdDarkMode className="text-[4vh]" />}
+            </button>
+
+            <button onClick={handleChangeLocale}>
+              <span className="text-white text-[2.5vh]">{toggleLocale.toUpperCase()}</span>
+            </button>
+
+
+
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white text-[4vh]"
+            >
+              {isMobileMenuOpen ? <MdClose className="text-[4.5vh]" /> : <MdMenu className="text-[4.5vh]" />}
+            </button>
           </div>
           <div className="hidden md:flex items-center space-x-[1.5vw] ml-auto">
             <button

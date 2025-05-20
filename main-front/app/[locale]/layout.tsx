@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TopNav from "@/app/components/TopNav";
@@ -8,10 +7,21 @@ import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Yapay Zeka Samsun",
-  description: "Samsun'un yapay zeka ve teknoloji merkezi",
-};
+
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  const isTR = params.locale === "tr";
+
+  return {
+    title: isTR ? "Yapay Zeka Samsun" : "Artificial Intelligence Samsun",
+    description: isTR
+      ? "Yapay zeka hakkında interaktif bilgiler"
+      : "Interactive content about AI",
+    icons: {
+      icon: "/favicon.ico",
+    }
+  };
+}
+
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }>; }) {
   const { locale } = await params;
