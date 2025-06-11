@@ -8,6 +8,7 @@ const MainSection = ({ locale }: { locale: string }) => {
 
   return (
     <div className="md:mt-[16vh] mt-[12vh] w-full md:h-[84vh] h-[88vh] ">
+      <section id="main" className="w-full h-full">
       <video
         autoPlay
         loop
@@ -40,6 +41,7 @@ const MainSection = ({ locale }: { locale: string }) => {
           />
         </h1>
       </div>
+      </section>
     </div>
   );
 };

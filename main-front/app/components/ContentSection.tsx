@@ -24,7 +24,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
         <div className="w-[40vw]">
           <h1 className="text-[4vw] md:text-[2vw] font-PTSans">{title}</h1>
         </div>
-        <div className="w-[40vw] mt-[2vh] text-[3vw] md:text-[1vw] font-PTSerif">
+        <div className="w-[40vw] mt-[2vh] text-[2.5vw] md:text-[1vw] font-PTSerif">
           <p>{text}</p>
         </div>
       </div>

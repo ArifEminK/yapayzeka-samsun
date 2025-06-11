@@ -90,34 +90,27 @@ function TopNav({ locale }: { locale: string }) {
       <TopNavQuests key={i} href={item.href} questions={item.q} />
     ));
   const mobileRenderQuestions = () => {
-    if (pathname === "/engineering") {
-      return [
-        { href: "software", q: "Yazılım Mühendisliği" },
-        { href: "machine", q: "Makine Mühendisliği" },
-        { href: "electrical", q: "Elektrik-Elektronik Mühendisliği" },
-        { href: "industry", q: "Endüstri Mühendisliği" },
-        { href: "biomedical", q: "Biyomedikal Mühendisliği" },
-        { href: "basic", q: "Temel Bilimler" },
-      ].map((q, i) => <TopNavQuests key={i} href={q.href} questions={q.q} />);
-    } else if (pathname === "/whatsai") {
-      return [
-        { href: "means", q: "Ne Anlama Geliyor?" },
-        { href: "types", q: "Türleri Nelerdir?" },
-        { href: "learning", q: "Nasıl Öğrenir?" },
-        { href: "safety", q: "Güvenli Mi?" },
-        { href: "tools", q: "Araçları Nelerdir?" },
-        { href: "turing", q: "Turing Testi Nedir?" },
-        { href: "future", q: "Geleceği ne olacak?" },
-      ].map((item, i) => <TopNavQuests key={i} href={item.href} questions={item.q} />);
+    if (pathname.includes("/engineering")) {
+      return t.raw("engineering").map((item: NavQuestion, i: number) => (
+        <TopNavQuests key={i} href={item.href} questions={item.q} />
+      ));
+    } else if (pathname.includes("/whatsai")) {
+      return t.raw("whatsai").map((item: NavQuestion, i: number) => (
+        <TopNavQuests key={i} href={item.href} questions={item.q} />
+      ));
     } else {
-      return [
-        { href: "projects", q: "Bölümlerimiz" },
-        { href: "news", q: "Haberler" },
-        { href: "whats-ai", q: "Yapay Zeka Nedir?" },
-        { href: "ai-safety", q: "Yapay Zeka Güvenli Mi?" },
-        { href: "ai-using", q: "Yapay Zeka Nasıl Kullanılıyor?" },
-        { href: "ai-history", q: "Yapay Zekanın Tarihçesi" },
-      ].map((item, i) => <TopNavQuests key={i} href={item.href} questions={item.q} />);
+      // Ana sayfa için hem TopNavQuestions hem de TopNavTitles'ı birleştir
+      const defaultQuestions = t.raw("default");
+      const mainTitles = [
+        { href: "main", q: b('title1') },
+        { href: "projects", q: b('title2') },
+        { href: "news", q: b('title3') }
+      ];
+      
+      const allItems = [...mainTitles, ...defaultQuestions];
+      return allItems.map((item: NavQuestion, i: number) => (
+        <TopNavQuests key={i} href={item.href} questions={item.q} />
+      ));
     }
   };
 

@@ -117,7 +117,7 @@ const page = () => {
           <TitleLane title={section.title} bg={`bg${8 + index}`} />
 
           <h1
-            className="text-textColor font-sans text-[2vw] sm:text-[2vw] mt-[4vh] font-bold z-[2] text-center"
+            className="text-textColor font-sans text-[4vw] sm:text-[2vw] mt-[4vh] font-bold z-[2] text-center"
             style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.9)" }}
           >
             Yapay Zeka Üzerine Çalışan Akademisyenlerimiz
@@ -136,7 +136,7 @@ const page = () => {
           </div>
 
           <h1
-            className="text-textColor font-sans text-[2vw] sm:text-[2vw] mt-[4vh] font-bold z-[2] text-center"
+            className="text-textColor font-sans text-[4vw] sm:text-[2vw] mt-[4vh] font-bold z-[2] text-center"
             style={{ textShadow: "1px 1px 3px rgba(0,0,0,0.9)" }}
           >
             Yapay Zeka Üzerine Çalışmalarımız
@@ -144,7 +144,7 @@ const page = () => {
 
           <div className="flex flex-col items-center">
             {section.groupedProjects.map((row, rowIndex) => (
-              <div key={rowIndex} className="flex justify-center gap-[2vw] w-full py-[2vw]">
+              <div key={rowIndex} className="flex justify-center gap-[2vw] w-full py-[6vw] md:py-[2vw] mb-[5vw] md:mb-[0vw]">
                 {row.map((item, i) => (
                   <div key={`${rowIndex}-${i}`} className="w-[26vw]">
                     <ProjectComp title={item.name} text={item.text} imgUrl={item.img} />
