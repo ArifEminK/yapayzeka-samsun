@@ -14,7 +14,7 @@ const ProjectComp: React.FC<ProjectCompProps> = ({ title, text, imgUrl }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start({
         opacity: 1,
@@ -40,9 +40,9 @@ const ProjectComp: React.FC<ProjectCompProps> = ({ title, text, imgUrl }) => {
           sizes="(max-width: 768px) 100vw, 26vw"
         />
       </div>
-      <div className="h-[6vw] mt-[2vh] text-start">
+      <div className="h-[4vw] md:h-[6vw] text-start">
         <h2
-          className="relative inline-block text-[1.5vh] md:text-[2.5vh] text-textColor font-PTSerif font-bold m-0
+          className="relative inline-block line-clamp-2 md:line-clamp-none text-[1vh] md:text-[2.5vh] text-textColor font-PTSerif font-bold m-0
           before:content-[''] before:absolute before:origin-left before:bottom-0 before:w-0
           before:h-[2px] before:bg-underlineColor before:transition-all before:duration-300 before:ease-out
           group-hover:before:w-full group-hover:before:left-0"
