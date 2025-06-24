@@ -29,7 +29,7 @@
   },
   "TopNavTitles": {
     "title1": "Yapay Zeka",
-    "title2": "Bölümlerimiz",
+    "title2": "Çalışmalarımız",
     "title3": "Haberler"
   },
   "MainSection": {
@@ -130,5 +130,20 @@
       "6": "Turing Testi, bir makinenin insan gibi düşünüp düşünemediğini anlamak için yapılan bir testtir. Bir insan değerlendirici, yazılı olarak bir makine ve bir insanla konuşur ve hangisinin insan olduğunu anlamaya çalışır. Eğer ayırt edemezse, makine testi geçmiş olur. Bu test, yapay zekanın insan benzeri davranış üretme kapasitesini ölçmek için önemli bir ölçüttür.",
       "7": "Yapay zekanın geleceği, insan zekasıyla entegre çalışabilen sistemlerin gelişimi yönünde ilerlemektedir. AI, otomasyondan sağlığa, eğitimden üretime kadar her alanda devrim yaratıyor. Ancak bu gelişimin güvenli, etik ve insan odaklı olması için uluslararası işbirliği, yasal düzenlemeler ve sürekli denetim büyük önem taşımaktadır."
     }
+  },
+  "Faculties": {
+    "Software": {
+      "Title": "Yazılım Mühendisliği",
+      "Text": "Yazılım Mühendisliği, yapay zeka ve yazılım alanında çalışan akademisyenlerimizin bilgilerini ve projelerini paylaşmak için oluşturulmuş bir bölümdür."
+    },
+    "Machine": {
+      "Title": "Makine Mühendisliği",
+      "Text": "Makine Mühendisliği, yapay zeka ve makine alanında çalışan akademisyenlerimizin bilgilerini ve projelerini paylaşmak için oluşturulmuş bir bölümdür."
+    },
+    "Electrical": {
+      "Title": "Elektrik-Elektronik Mühendisliği",
+      "Text": "Elektrik-Elektronik Mühendisliği, yapay zeka ve elektrik-elektronik alanında çalışan akademisyenlerimizin bilgilerini ve projelerini paylaşmak için oluşturulmuş bir bölümdür."
+    },
+    "Industry": {}
   }
 }

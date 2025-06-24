@@ -10,7 +10,6 @@ import { TypeAnimation } from "react-type-animation";
 import { IoIosArrowBack } from "react-icons/io";
 import { useTranslations } from "next-intl";
 
-
 type NavQuestion = { href: string; q: string };
 type NavQuestionsJSON = {
   engineering: NavQuestion[];
@@ -21,30 +20,35 @@ type NavQuestionsJSON = {
 function TopNav({ locale }: { locale: string }) {
   const t = useTranslations('TopNavQuestions');
   const b = useTranslations('TopNavTitles');
+  
+  // State tanımlamaları
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const pathname = usePathname();
   const router = useRouter();
   const toggleLocale = locale === "en" ? "tr" : "en";
 
-  const handleChangeLocale = () => {
-    let purePath = pathname.replace(/^\/(tr|en)(?=\/|$)/, "");
-    if (!purePath.startsWith("/")) purePath = "/" + purePath;
-    const newPath = `/${toggleLocale}${purePath}`;
-    router.push(newPath);
-  };
-
-
-  const isHome = pathname === "/" || pathname === "/tr" || pathname === "/en";
-
+  // Tema ve scroll yönetimi için tek useEffect
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
+    // Tema yönetimi
+    const storedTheme = localStorage.getItem("theme") as "light" | "dark";
     if (storedTheme) {
-      setTheme(storedTheme as "light" | "dark");
+      setTheme(storedTheme);
     }
-  }, []);
 
+    // Scroll yönetimi
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+      if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobileMenuOpen]);
+
+  // Tema değişikliği için useEffect
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -54,41 +58,36 @@ function TopNav({ locale }: { locale: string }) {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // Yardımcı fonksiyonlar
+  const handleChangeLocale = () => {
+    let purePath = pathname.replace(/^\/(tr|en)(?=\/|$)/, "");
+    if (!purePath.startsWith("/")) purePath = "/" + purePath;
+    const newPath = `/${toggleLocale}${purePath}`;
+    router.push(newPath);
+  };
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
-  useEffect(() => {
-    const closeMenuOnScroll = () => {
-      if (isMobileMenuOpen) setIsMobileMenuOpen(false);
-    };
 
-    window.addEventListener("scroll", closeMenuOnScroll);
-    return () => window.removeEventListener("scroll", closeMenuOnScroll);
-  }, [isMobileMenuOpen]);
+  // Hesaplanmış değerler
+  const isHome = pathname === "/" || pathname === "/tr" || pathname === "/en";
+  
+  const getCurrentSection = (): keyof NavQuestionsJSON => {
+    if (pathname.includes("/engineering")) return "engineering";
+    if (pathname.includes("/whatsai")) return "whatsai";
+    return "default";
+  };
 
-  let section: keyof NavQuestionsJSON;
-
-  if (pathname.includes("/engineering")) {
-    section = "engineering";
-  } else if (pathname.includes("/whatsai")) {
-    section = "whatsai";
-  } else {
-    section = "default";
-  }
-
+  const section = getCurrentSection();
   const questions: NavQuestion[] = t.raw(section);
+
+  // Render fonksiyonları
   const renderQuestions = () =>
     questions.map((item, i) => (
       <TopNavQuests key={i} href={item.href} questions={item.q} />
     ));
+
   const mobileRenderQuestions = () => {
     if (pathname.includes("/engineering")) {
       return t.raw("engineering").map((item: NavQuestion, i: number) => (
@@ -114,26 +113,22 @@ function TopNav({ locale }: { locale: string }) {
     }
   };
 
-
   return (
     <nav className={`bg-defBg flex flex-row md:flex-col items-center shadow-md fixed w-full z-50 transition-all duration-300 ${isScrolled ? "h-[12vh] md:h-[15vh]" : "h-[12vh] md:h-[20vh]"}`}>
       <div className={`w-[100%] px-[2vw] ${isScrolled ? "mt-[1vw]" : "mt-[3vh]"},${isScrolled ? "h-[5vh] md:h-[10vh]" : "h-[12vh] md:h-[15vh]"}`}>
         <div className="flex h-full justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-[4vw] md:gap-[2vw]">
-              {isScrolled! == false ? (
+              {!isScrolled && (
                 <Image
                   src="/images/logo_beyaz.png"
                   alt="Logo"
                   width={60}
                   height={60}
-                  className={`w-auto opacity-75 ${isHome == true ? "h-[10vh]" : "h-[8vh]"
-                    }`}
+                  className={`w-auto opacity-75 ${isHome ? "h-[10vh]" : "h-[8vh]"}`}
                 />
-              ) : (
-                <div></div>
               )}
-              {isHome == true ? (
+              {isHome ? (
                 <span className="hover:opacity-100 ml-[2vw] sm:text-[5vh] text-[4vh] font-semibold opacity-70 font-PTSans text-white">
                   {b('title1')}
                 </span>
@@ -159,7 +154,7 @@ function TopNav({ locale }: { locale: string }) {
                       wrapper="span"
                       speed={10}
                       repeat={Infinity}
-                      className="text-white ml-[0.5vw]  font-code"
+                      className="text-white ml-[0.5vw] font-code"
                     />
                   </div>
                 </div>
@@ -173,6 +168,8 @@ function TopNav({ locale }: { locale: string }) {
               </div>
             )}
           </div>
+
+          {/* Mobil menü butonları */}
           <div className="flex items-center gap-[2vw] md:hidden">
             <button
               onClick={toggleTheme}
@@ -186,8 +183,6 @@ function TopNav({ locale }: { locale: string }) {
               <span className="text-white text-[2.5vh]">{toggleLocale.toUpperCase()}</span>
             </button>
 
-
-
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-white text-[4vh]"
@@ -195,6 +190,8 @@ function TopNav({ locale }: { locale: string }) {
               {isMobileMenuOpen ? <MdClose className="text-[4.5vh]" /> : <MdMenu className="text-[4.5vh]" />}
             </button>
           </div>
+
+          {/* Desktop menü butonları */}
           <div className="hidden md:flex items-center space-x-[1.5vw] ml-auto">
             <button
               onClick={toggleTheme}
@@ -203,21 +200,21 @@ function TopNav({ locale }: { locale: string }) {
             >
               {theme === "light" ? <MdLightMode size={36} /> : <MdDarkMode size={36} className="text-white" />}
             </button>
-            <span className="text-white text-[2.5vh]">
-              <button onClick={handleChangeLocale}>
-                <span className="text-white text-[2.5vh]">{toggleLocale.toUpperCase()}</span>
-              </button>
-            </span>
+            <button onClick={handleChangeLocale}>
+              <span className="text-white text-[2.5vh]">{toggleLocale.toUpperCase()}</span>
+            </button>
           </div>
         </div>
       </div>
 
+      {/* Desktop navigasyon menüsü */}
       <div
         className={`hidden md:flex w-[100vw] h-full items-center px-[5vh] bg-[#2A3B53] justify-between text-white ${isScrolled ? "h-[3vh] md:h-[5vh]" : "h-[4vh] md:h-[5vh]"}`}
       >
         {renderQuestions()}
       </div>
 
+      {/* Mobil menü */}
       {isMobileMenuOpen && (
         <div
           className="absolute top-[12vh] left-0 w-full bg-[#2A3B53] text-white px-[4vw] py-[3vh] flex flex-col space-y-[2vh] z-50 transition-transform duration-300 ease-in-out"
@@ -226,9 +223,6 @@ function TopNav({ locale }: { locale: string }) {
         </div>
       )}
     </nav>
-
-
-
   );
 };
 

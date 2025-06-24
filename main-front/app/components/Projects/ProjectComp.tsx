@@ -40,7 +40,7 @@ const ProjectComp: React.FC<ProjectCompProps> = ({ title, text, imgUrl }) => {
           sizes="(max-width: 768px) 100vw, 26vw"
         />
       </div>
-      <div className="h-[4vw] md:h-[6vw] text-start">
+      <div className="h-[4vw] mt-[1vh] md:h-[6vw] text-start">
         <h2
           className="relative inline-block line-clamp-2 md:line-clamp-none text-[1vh] md:text-[2.5vh] text-textColor font-PTSerif font-bold m-0
           before:content-[''] before:absolute before:origin-left before:bottom-0 before:w-0

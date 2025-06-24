@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
-  const isTR = params.locale === "tr";
+  const { locale } = await params;
+  const isTR = locale === "tr";
 
   return {
     title: isTR ? "Yapay Zeka Samsun" : "Artificial Intelligence Samsun",
@@ -36,14 +37,14 @@ export default async function RootLayout({ children, params }: { children: React
             <TopNav locale={locale} />
             {children}
           </div>
+          <footer className="bg-topNavBg text-textColor py-8">
+            <div className="container mx-auto px-4 text-center">
+              <p className="font-opensans">
+                &copy; {new Date().getFullYear()} {locale === "tr" ? "Yapay Zeka Samsun. Tüm hakları saklıdır." : "AI Samsun. All rights reserved."}
+              </p>
+            </div>
+          </footer>
         </NextIntlClientProvider>
-        <footer className="bg-topNavBg text-textColor py-8">
-          <div className="container mx-auto px-4 text-center">
-            <p className="font-opensans">
-              &copy; {new Date().getFullYear()} {locale === "tr" ? "Yapay Zeka Samsun. Tüm hakları saklıdır." : "AI Samsun. All rights reserved."}
-            </p>
-          </div>
-        </footer>
       </body>
     </html>
   );
